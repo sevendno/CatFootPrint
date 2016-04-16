@@ -1,0 +1,23 @@
+{
+    "elements":{
+        "0":["1","2","3"],
+        "1":["1","2","3","4"],
+        "2":["1","2","3","4","5"],
+        "3":["1","2","3","#","4","5"]
+    },
+    "levelTimes":"3",
+    
+    "musicID":"music.mp3",
+    
+    "soundClick":"",
+    
+    "cellCount":"6",
+    
+    "language":{
+        "btn_start":"Tap to Start",
+        "btn_back":"Back",
+        "btn_shared":"Share",
+        "btn_sound":"Sound ON/OFF",
+        "game_name":"Cat FootFrints"
+    }
+}
