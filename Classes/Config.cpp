@@ -22,14 +22,45 @@ void Config::Setup()
 {
     const std::string configStr = cocos2d::FileUtils::getInstance()->getStringFromFile("config.json");
     
-    Json::Value root;
+    Json::Value json;
     Json::Reader reader;
-    reader.parse(configStr, root);
+    reader.parse(configStr, json);
     
-    if (root.isMember("cellCount")) {
-        _cellCount = root["cellCount"].asInt();
+    if (json.isMember("cellCount")) {
+        _cellCount = json["cellCount"].asInt();
     }
-    if (root.isMember("levelTimes")) {
-        _levelTimes = root["levelTimes"].asInt();
+    if (json.isMember("levelTimes")) {
+        _levelTimes = json["levelTimes"].asInt();
     }
+    if (json.isMember("musicID")) {
+        _musciPath = json["musicID"].asString();
+    }
+    if (json.isMember("language")) {
+        _language = json["language"];
+    }
+    if (json.isMember("elements")) {
+        _elements = json["elements"];
+    }
+}
+
+string Config::getLanguage(const string &key) const
+{
+    if (_language.isMember(key)) {
+        return _language[key].asString();
+    }
+    return "";
+}
+
+vector<string> Config::getElements(int level)
+{
+    const int elementsID = std::ceil(level*1.0f / _levelTimes);
+    vector<string> eles;
+    if (!_elements.isMember(to_string(elementsID))) {
+        return eles;
+    }
+    const Json::Value &elements = _elements[to_string(elementsID)];
+    for (const auto& element : elements) {
+        eles.push_back(element.asString());
+    }
+    return eles;
 }

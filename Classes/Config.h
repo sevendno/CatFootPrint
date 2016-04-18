@@ -9,7 +9,7 @@
 #ifndef Config_h
 #define Config_h
 #include "json_cpp.h"
-
+using namespace std;
 namespace CatFootPrint
 {
     class Config
@@ -18,7 +18,11 @@ namespace CatFootPrint
         static Config* getIns();
         void Setup();
         int getCellCount() const { return _cellCount; };
+        int getTotalCellCount() const { return _cellCount*_cellCount; };
         int getLevelTimes() const { return _levelTimes; };
+        string getMusicPath() const { return _musciPath; };
+        string getLanguage(const string &key) const;
+        vector<string> getElements(int level);
     private:
         Config() {};
         ~Config() {};
@@ -26,7 +30,9 @@ namespace CatFootPrint
         static Config* _instance;
         int _cellCount = 0;
         int _levelTimes = 0;
-        Json::Value _data;
+        string _musciPath = "";
+        Json::Value _language;
+        Json::Value _elements;
     };
 }
 

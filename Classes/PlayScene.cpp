@@ -28,7 +28,7 @@ void PlayScene::initView()
     _container->setContentSize(Size(winSize.width, winSize.width));
     
     const int rowCellCount = Config::getIns()->getCellCount();
-    const int totalCellCount = rowCellCount * rowCellCount;
+    const int totalCellCount = Config::getIns()->getTotalCellCount();
     const int cellWidth = int(winSize.width*1.0f / rowCellCount);
     
     int index = 1;
@@ -45,11 +45,43 @@ void PlayScene::initView()
         _cellMaps[index] = vo;
         index++;
     }
+    
+    initChessBoard();
+}
+
+void PlayScene::initChessBoard()
+{
+    _isInitChessing = true;
+    _level++;
+    _curLevelElements = Config::getIns()->getElements(_level);
+    
+    const int totalCellCount = Config::getIns()->getTotalCellCount();
+    
+    for (const string element : _curLevelElements) {
+        int index = getRandomIndex();
+        while (index <= totalCellCount && !_cellMaps[index].value.empty()) {
+            index = getRandomIndex();
+        }
+        _cellMaps[index].value = element;
+    }
+    
+    _isInitChessing = false;
+}
+
+int PlayScene::getRandomIndex()
+{
+    const int totalCellCount = Config::getIns()->getTotalCellCount();
+    const int randomIndex = rand()%(totalCellCount + 1);
+    return randomIndex;
 }
 
 void PlayScene::handleCellClick(bool result)
 {
-    
+    if (_isInitChessing) return;
+    _curLevelElements.erase(_curLevelElements.begin());
+    if (_curLevelElements.empty()) {
+        initChessBoard();
+    }
 }
 
 //================== CellView ==================
@@ -77,18 +109,15 @@ bool CellView::init()
         return false;
     }
     setContentSize(Size(_w, _h));
-    
-    auto bg = Layout::create();
-    bg->setContentSize(getContentSize());
-    addChild(bg);
-    bg->addTouchEventListener([&](Ref* sender, Widget::TouchEventType type) {
-        if (type == Widget::TouchEventType::BEGAN) {
+    setTouchEnabled(true);
+    addTouchEventListener([&](Ref* sender, Widget::TouchEventType type) {
+        if (type == Widget::TouchEventType::ENDED) {
             if (_cbResult) {
                 _cbResult(false);
             }
         }
     });
-    setBackGroundColorType(Layout::BackGroundColorType::GRADIENT);
-    setBackGroundColor(Color3B::RED);
+    setBackGroundColorType(Layout::BackGroundColorType::SOLID);
+    setBackGroundColor(Color3B::WHITE);
     return true;
 }

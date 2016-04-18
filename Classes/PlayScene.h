@@ -28,10 +28,15 @@ namespace CatFootPrint
         virtual void initView() override;
     private:
         void handleCellClick(bool result);
+        void initChessBoard();
+        int getRandomIndex();
     private:
         Node* _container = nullptr;
         Node* _rightPanel = nullptr;
         map<int, CellVO> _cellMaps;
+        int _level = 0;
+        bool _isInitChessing = false;
+        vector<string> _curLevelElements;
     };
     
     class CellView : public Layout
