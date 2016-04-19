@@ -57,12 +57,17 @@ void PlayScene::initChessBoard()
     
     const int totalCellCount = Config::getIns()->getTotalCellCount();
     
+    vector<int> actionShow;
     for (const string element : _curLevelElements) {
         int index = getRandomIndex();
         while (index <= totalCellCount && !_cellMaps[index].value.empty()) {
             index = getRandomIndex();
         }
         _cellMaps[index].value = element;
+        actionShow.push_back(index);
+    }
+    if (!actionShow.empty()) {
+        
     }
     
     _isInitChessing = false;
