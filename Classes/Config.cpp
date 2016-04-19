@@ -41,6 +41,9 @@ void Config::Setup()
     if (json.isMember("elements")) {
         _elements = json["elements"];
     }
+    if (json.isMember("assetsID")) {
+        _assetsPath = json["assetsID"].asString();
+    }
 }
 
 string Config::getLanguage(const string &key) const

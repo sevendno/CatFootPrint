@@ -37,6 +37,7 @@ namespace CatFootPrint
         map<int, CellVO> _cellMaps;
         int _level = 0;
         bool _isInitChessing = false;
+        vector<int> _actionShow;
         vector<string> _curLevelElements;
     };
     
@@ -47,7 +48,7 @@ namespace CatFootPrint
         CellView(float w, float h, const function<void(bool result)> &cbResult);
         ~CellView() {};
         virtual bool init() override;
-        void showValue(const string& key);
+        void showValue(const string& key, const function<void()> &cbDelayComplete);
         void showFootFrint();
         void clear();
     private:

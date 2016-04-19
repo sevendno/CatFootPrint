@@ -1,6 +1,7 @@
 #include "AppDelegate.h"
 #include "StartScene.h"
 #include "Config.h"
+#include "Assets.h"
 USING_NS_CC;
 using namespace CatFootPrint;
 
@@ -43,6 +44,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     FileUtils::getInstance()->addSearchPath("res");
 
     Config::getIns()->Setup();
+    Assets::getIns()->Setup();
     // create a scene. it's an autorelease object
     auto scene = StartScene::create();
 

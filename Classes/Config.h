@@ -22,6 +22,7 @@ namespace CatFootPrint
         int getLevelTimes() const { return _levelTimes; };
         string getMusicPath() const { return _musciPath; };
         string getLanguage(const string &key) const;
+        string getAssetsPath() const { return _assetsPath; };
         vector<string> getElements(int level);
     private:
         Config() {};
@@ -31,6 +32,7 @@ namespace CatFootPrint
         int _cellCount = 0;
         int _levelTimes = 0;
         string _musciPath = "";
+        string _assetsPath = "";
         Json::Value _language;
         Json::Value _elements;
     };

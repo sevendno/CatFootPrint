@@ -19,5 +19,7 @@
         "btn_shared":"Share",
         "btn_sound":"Sound ON/OFF",
         "game_name":"Cat FootFrints"
-    }
+    },
+    
+    "assetsID":"assets.plist"
 }

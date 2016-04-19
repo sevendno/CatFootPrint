@@ -8,6 +8,7 @@
 
 #include "PlayScene.h"
 #include "Config.h"
+#include "Assets.h"
 using namespace CatFootPrint;
 
 bool PlayScene::init()
@@ -54,23 +55,37 @@ void PlayScene::initChessBoard()
     _isInitChessing = true;
     _level++;
     _curLevelElements = Config::getIns()->getElements(_level);
+    for (auto cell : _cellMaps) {
+        cell.second.value = "";
+    }
+    _actionShow.clear();
     
     const int totalCellCount = Config::getIns()->getTotalCellCount();
-    
-    vector<int> actionShow;
     for (const string element : _curLevelElements) {
         int index = getRandomIndex();
         while (index <= totalCellCount && !_cellMaps[index].value.empty()) {
             index = getRandomIndex();
         }
         _cellMaps[index].value = element;
-        actionShow.push_back(index);
+        _actionShow.push_back(index);
     }
-    if (!actionShow.empty()) {
-        
-    }
-    
+    actionShowValue();
     _isInitChessing = false;
+}
+
+void PlayScene::actionShowValue()
+{
+    if (!_actionShow.empty()) {
+        const int index = _actionShow.front();
+        if (_container->getChildByTag(index)) {
+            dynamic_cast<CellView*>(_container->getChildByTag(index))->showValue(_cellMaps[index].value, [&]() {
+                _actionShow.erase(_actionShow.begin());
+                actionShowValue();
+            });
+        }
+    } else {
+        initChessBoard();
+    }
 }
 
 int PlayScene::getRandomIndex()
@@ -127,9 +142,10 @@ bool CellView::init()
     return true;
 }
 
-void CellView::showValue(const string &key)
+void CellView::showValue(const string &key, const function<void()> &cbDelayComplete)
 {
-    
+    auto spr = Assets::getIns()->getElementsByID(key);
+    addChild(spr);
 }
 
 void CellView::showFootFrint()
