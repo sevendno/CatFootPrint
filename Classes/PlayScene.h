@@ -46,6 +46,9 @@ namespace CatFootPrint
         CellView(float w, float h, const function<void(bool result)> &cbResult);
         ~CellView() {};
         virtual bool init() override;
+        void showValue(const string& key);
+        void showFoorFrint();
+        void clear();
     private:
         float _w = 0.0;
         float _h = 0.0;
