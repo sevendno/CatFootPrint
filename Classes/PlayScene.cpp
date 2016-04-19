@@ -132,7 +132,7 @@ void CellView::showValue(const string &key)
     
 }
 
-void CellView::showFootPrint()
+void CellView::showFootFrint()
 {
     
 }

@@ -48,7 +48,7 @@ namespace CatFootPrint
         ~CellView() {};
         virtual bool init() override;
         void showValue(const string& key);
-        void showFoorFrint();
+        void showFootFrint();
         void clear();
     private:
         float _w = 0.0;
