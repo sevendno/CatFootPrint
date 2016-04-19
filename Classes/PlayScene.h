@@ -29,6 +29,7 @@ namespace CatFootPrint
     private:
         void handleCellClick(bool result);
         void initChessBoard();
+        void actionShowValue();
         int getRandomIndex();
     private:
         Node* _container = nullptr;
