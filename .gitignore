@@ -1,1 +1,7 @@
-*.[xcuserstate]
+simulator/*
+publish/*
+xcuserdata
+xcshareddata
+project.xcworkspace/
+.DS_Store
+*.pyc
