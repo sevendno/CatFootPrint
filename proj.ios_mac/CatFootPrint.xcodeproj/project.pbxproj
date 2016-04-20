@@ -25,6 +25,7 @@
 		21AC309A1CC13A5400500E06 /* json_valueiterator.inl in Resources */ = {isa = PBXBuildFile; fileRef = 21AC308B1CC13A5400500E06 /* json_valueiterator.inl */; };
 		21AC309B1CC13A5400500E06 /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AC308C1CC13A5400500E06 /* json_writer.cpp */; };
 		21AC309C1CC13A5400500E06 /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AC308C1CC13A5400500E06 /* json_writer.cpp */; };
+		21F2FC7F1CC7CDB800FAB514 /* Assets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F2FC7D1CC7CDB800FAB514 /* Assets.cpp */; };
 		21F735601CBFD7F2003C5299 /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F7355E1CBFD7F2003C5299 /* BaseScene.cpp */; };
 		21F735611CBFD7F2003C5299 /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F7355E1CBFD7F2003C5299 /* BaseScene.cpp */; };
 		21F735641CBFD9BA003C5299 /* StartScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F735621CBFD9BA003C5299 /* StartScene.cpp */; };
@@ -154,6 +155,8 @@
 		21AC308E1CC13A5400500E06 /* value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = value.h; sourceTree = "<group>"; };
 		21AC308F1CC13A5400500E06 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		21AC30901CC13A5400500E06 /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
+		21F2FC7D1CC7CDB800FAB514 /* Assets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Assets.cpp; sourceTree = "<group>"; };
+		21F2FC7E1CC7CDB800FAB514 /* Assets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assets.h; sourceTree = "<group>"; };
 		21F7355E1CBFD7F2003C5299 /* BaseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseScene.cpp; sourceTree = "<group>"; };
 		21F7355F1CBFD7F2003C5299 /* BaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScene.h; sourceTree = "<group>"; };
 		21F735621CBFD9BA003C5299 /* StartScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StartScene.cpp; sourceTree = "<group>"; };
@@ -396,6 +399,8 @@
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
 				21F7355E1CBFD7F2003C5299 /* BaseScene.cpp */,
 				21F7355F1CBFD7F2003C5299 /* BaseScene.h */,
+				21F2FC7D1CC7CDB800FAB514 /* Assets.cpp */,
+				21F2FC7E1CC7CDB800FAB514 /* Assets.h */,
 				21F735621CBFD9BA003C5299 /* StartScene.cpp */,
 				21F735631CBFD9BA003C5299 /* StartScene.h */,
 				21F735661CBFDA1E003C5299 /* PlayScene.cpp */,
@@ -626,6 +631,7 @@
 				21F735601CBFD7F2003C5299 /* BaseScene.cpp in Sources */,
 				21AC30591CC12C6400500E06 /* Config.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				21F2FC7F1CC7CDB800FAB514 /* Assets.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
