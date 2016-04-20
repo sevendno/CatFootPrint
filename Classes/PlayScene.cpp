@@ -146,6 +146,9 @@ void CellView::showValue(const string &key, const function<void()> &cbDelayCompl
 {
     auto spr = Assets::getIns()->getElementsByID(key);
     addChild(spr);
+    if (cbDelayComplete) {
+        
+    }
 }
 
 void CellView::showFootFrint()
