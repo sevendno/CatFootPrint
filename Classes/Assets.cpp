@@ -30,3 +30,9 @@ Sprite* Assets::getElementsByID(const string &id)
     auto spriteFrame = SpriteFrameCache::getInstance()->getSpriteFrameByName("elements/" + id + ".png");
     return Sprite::createWithSpriteFrame(spriteFrame);
 }
+
+Sprite* Assets::getFootIcon()
+{
+    auto spriteFrame = SpriteFrameCache::getInstance()->getSpriteFrameByName("elements/10.png");
+    return Sprite::createWithSpriteFrame(spriteFrame);
+}

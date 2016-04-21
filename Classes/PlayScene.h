@@ -27,7 +27,7 @@ namespace CatFootPrint
     protected:
         virtual void initView() override;
     private:
-        void handleCellClick(bool result);
+        void handleCellClick(const string &value);
         void initChessBoard();
         void actionShowValue();
         int getRandomIndex();
@@ -44,17 +44,20 @@ namespace CatFootPrint
     class CellView : public Layout
     {
     public:
-        static CellView* create(float w, float h, const function<void(bool result)> &cbResult);
-        CellView(float w, float h, const function<void(bool result)> &cbResult);
+        static CellView* create(int index, float w, float h, const function<void(const string &value)> &cbResult);
+        CellView(int index, float w, float h, const function<void(const string &value)> &cbResult);
         ~CellView() {};
         virtual bool init() override;
         void showValue(const string& key, const function<void()> &cbDelayComplete);
         void showFootFrint();
+        void hideFootPrint();
         void clear();
     private:
         float _w = 0.0;
         float _h = 0.0;
-        function<void(bool result)> _cbResult = nullptr;
+        int _index = 0;
+        string _value = "";
+        function<void(const string &value)> _cbResult = nullptr;
     };
 }
 

@@ -44,6 +44,9 @@ void Config::Setup()
     if (json.isMember("assetsID")) {
         _assetsPath = json["assetsID"].asString();
     }
+    if (json.isMember("delayTime")) {
+        _delayTime = json["delayTime"].asFloat();
+    }
 }
 
 string Config::getLanguage(const string &key) const

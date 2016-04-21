@@ -18,6 +18,7 @@ namespace CatFootPrint
         static Assets* getIns();
         void Setup();
         Sprite* getElementsByID(const string &id);
+        Sprite* getFootIcon();
     private:
         Assets() {};
         ~Assets() {};

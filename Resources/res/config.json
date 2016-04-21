@@ -21,5 +21,7 @@
         "game_name":"Cat FootFrints"
     },
     
+    "delayTime":"0.5",
+    
     "assetsID":"assets.plist"
 }

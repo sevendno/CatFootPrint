@@ -34,7 +34,7 @@ void PlayScene::initView()
     
     int index = 1;
     while (index <= totalCellCount) {
-        auto itemView = CellView::create(cellWidth, cellWidth, CC_CALLBACK_1(PlayScene::handleCellClick, this));
+        auto itemView = CellView::create(index, cellWidth, cellWidth, CC_CALLBACK_1(PlayScene::handleCellClick, this));
         _container->addChild(itemView);
         const float xpos = index <= 6 ? (index - 1) * cellWidth : (index - 1) % rowCellCount * cellWidth;
         const float ypos = _container->getContentSize().height - ceil(index*1.0/rowCellCount) * cellWidth;
@@ -58,6 +58,11 @@ void PlayScene::initChessBoard()
     for (auto cell : _cellMaps) {
         cell.second.value = "";
     }
+    for (auto child : _container->getChildren()) {
+        if (dynamic_cast<CellView*>(child)) {
+            dynamic_cast<CellView*>(child)->clear();
+        }
+    }
     _actionShow.clear();
     
     const int totalCellCount = Config::getIns()->getTotalCellCount();
@@ -70,7 +75,6 @@ void PlayScene::initChessBoard()
         _actionShow.push_back(index);
     }
     actionShowValue();
-    _isInitChessing = false;
 }
 
 void PlayScene::actionShowValue()
@@ -84,7 +88,12 @@ void PlayScene::actionShowValue()
             });
         }
     } else {
-        initChessBoard();
+        for (auto child : _container->getChildren()) {
+            if (dynamic_cast<CellView*>(child)) {
+                dynamic_cast<CellView*>(child)->showFootFrint();
+            }
+        }
+        _isInitChessing = false;
     }
 }
 
@@ -95,19 +104,24 @@ int PlayScene::getRandomIndex()
     return randomIndex;
 }
 
-void PlayScene::handleCellClick(bool result)
+void PlayScene::handleCellClick(const string &value)
 {
     if (_isInitChessing) return;
-    _curLevelElements.erase(_curLevelElements.begin());
+    auto findResult = find(_curLevelElements.begin(), _curLevelElements.end(), value);
+    if (findResult == _curLevelElements.end()) {
+        return;
+    }
+    _curLevelElements.erase(findResult);
     if (_curLevelElements.empty()) {
         initChessBoard();
     }
 }
 
 //================== CellView ==================
-CellView* CellView::create(float w, float h, const function<void(bool result)> &cbResult)
+static const string FOOT_ICON = "footIconKey";
+CellView* CellView::create(int index, float w, float h, const function<void(const string &value)> &cbResult)
 {
-    auto pRet = new CellView(w, h, cbResult);
+    auto pRet = new CellView(index, w, h, cbResult);
     if (pRet && pRet->init()) {
         pRet->autorelease();
     } else {
@@ -116,8 +130,9 @@ CellView* CellView::create(float w, float h, const function<void(bool result)> &
     return pRet;
 }
 
-CellView::CellView(float w, float h, const function<void(bool result)> &cbResult)
-:_w(w),
+CellView::CellView(int index, float w, float h, const function<void(const string &value)> &cbResult)
+:_index(index),
+_w(w),
 _h(h),
 _cbResult(cbResult)
 {
@@ -132,8 +147,9 @@ bool CellView::init()
     setTouchEnabled(true);
     addTouchEventListener([&](Ref* sender, Widget::TouchEventType type) {
         if (type == Widget::TouchEventType::ENDED) {
-            if (_cbResult) {
-                _cbResult(false);
+            if (_cbResult && !_value.empty()) {
+                hideFootPrint();
+                _cbResult(_value);
             }
         }
     });
@@ -144,17 +160,43 @@ bool CellView::init()
 
 void CellView::showValue(const string &key, const function<void()> &cbDelayComplete)
 {
+    _value = key;
     auto spr = Assets::getIns()->getElementsByID(key);
-    addChild(spr);
-    this->runAction(Sequence::create(DelayTime::create(1.0f), cbDelayComplete, NULL));
+    addChild(spr, 0);
+    spr->setName(_value);
+    spr->setScale(3);
+    spr->setPosition(Vec2(spr->getContentSize().width/2, spr->getContentSize().height/2));
+    this->runAction(Sequence::create(DelayTime::create(Config::getIns()->getDelayTime()), CallFunc::create(cbDelayComplete), NULL));
 }
 
 void CellView::showFootFrint()
 {
-    
+    if (_value.empty()) {
+        return;
+    }
+    hideFootPrint();
+    auto footIcon = Assets::getIns()->getFootIcon();
+    addChild(footIcon);
+    footIcon->setScale(5);
+    footIcon->setPosition(Vec2(footIcon->getContentSize().width/2, footIcon->getContentSize().height/2));
+    footIcon->setName(FOOT_ICON);
+}
+
+void CellView::hideFootPrint()
+{
+    if (this->getChildByName(FOOT_ICON)) {
+        this->removeChildByName(FOOT_ICON);
+    }
 }
 
 void CellView::clear()
 {
-    
+    if (_value.empty()) {
+        return;
+    }
+    hideFootPrint();
+    if (this->getChildByName(_value)) {
+        this->removeChildByName(_value);
+    }
+    _value = "";
 }

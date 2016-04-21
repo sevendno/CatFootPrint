@@ -20,6 +20,7 @@ namespace CatFootPrint
         int getCellCount() const { return _cellCount; };
         int getTotalCellCount() const { return _cellCount*_cellCount; };
         int getLevelTimes() const { return _levelTimes; };
+        float getDelayTime() const { return _delayTime; };
         string getMusicPath() const { return _musciPath; };
         string getLanguage(const string &key) const;
         string getAssetsPath() const { return _assetsPath; };
@@ -31,6 +32,7 @@ namespace CatFootPrint
         static Config* _instance;
         int _cellCount = 0;
         int _levelTimes = 0;
+        float _delayTime = 0.0;
         string _musciPath = "";
         string _assetsPath = "";
         Json::Value _language;
