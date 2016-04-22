@@ -8,6 +8,7 @@
 
 #include "BaseScene.h"
 #include "cocostudio/CocoStudio.h"
+#include "Config.h"
 using namespace CatFootPrint;
 
 void BaseScene::initButton(cocos2d::ui::Widget *widget, const function<void()> &cbClick)
@@ -27,7 +28,11 @@ void BaseScene::loadUI(const string &filename)
         return;
     }
     _mainUI = CSLoader::createNodeWithVisibleSize(filename + ".csb");
-    addChild(_mainUI);
+    addChild(_mainUI, 1);
+    
+    LayerColor* colorBg = LayerColor::create(Config::getIns()->getColor());
+    colorBg->setContentSize(_mainUI->getContentSize());
+    addChild(colorBg, 0);
     initView();
 }
 

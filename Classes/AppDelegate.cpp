@@ -66,7 +66,7 @@ void AppDelegate::applicationDidEnterBackground() {
 void AppDelegate::applicationWillEnterForeground() {
     Director::getInstance()->startAnimation();
 
-    
+    Config::getIns()->Setup();
     Director::getInstance()->replaceScene(StartScene::create());
     
     // if you use SimpleAudioEngine, it must resume here

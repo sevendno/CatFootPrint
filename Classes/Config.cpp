@@ -47,6 +47,10 @@ void Config::Setup()
     if (json.isMember("delayTime")) {
         _delayTime = json["delayTime"].asFloat();
     }
+    const int r = rand() % 256;
+    const int g = rand() % 256;
+    const int b = rand() % 256;
+    _color4b = Color4B(r, g, b, 255);
 }
 
 string Config::getLanguage(const string &key) const

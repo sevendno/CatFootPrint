@@ -153,8 +153,6 @@ bool CellView::init()
             }
         }
     });
-    setBackGroundColorType(Layout::BackGroundColorType::SOLID);
-    setBackGroundColor(Color3B::WHITE);
     return true;
 }
 
