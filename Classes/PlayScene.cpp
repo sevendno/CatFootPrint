@@ -9,6 +9,7 @@
 #include "PlayScene.h"
 #include "Config.h"
 #include "Assets.h"
+#include "cocostudio/CocoStudio.h"
 using namespace CatFootPrint;
 
 bool PlayScene::init()
@@ -22,7 +23,7 @@ bool PlayScene::init()
 
 void PlayScene::initView()
 {
-    _container = _mainUI->getChildByName("Main")->getChildByName("container");
+    _container = dynamic_cast<Layout*>(_mainUI->getChildByName("Main")->getChildByName("container"));
     _rightPanel = _mainUI->getChildByName("Main")->getChildByName("rightPanel");
     
     const auto &winSize = Director::getInstance()->getWinSize();
@@ -52,18 +53,11 @@ void PlayScene::initView()
 
 void PlayScene::initChessBoard()
 {
-    _isInitChessing = true;
     _level++;
     _curLevelElements = Config::getIns()->getElements(_level);
-    for (auto cell : _cellMaps) {
-        cell.second.value = "";
-    }
-    for (auto child : _container->getChildren()) {
-        if (dynamic_cast<CellView*>(child)) {
-            dynamic_cast<CellView*>(child)->clear();
-        }
-    }
-    _actionShow.clear();
+    _container->setEnabled(false);
+    
+    reset();
     
     const int totalCellCount = Config::getIns()->getTotalCellCount();
     for (const string element : _curLevelElements) {
@@ -93,7 +87,7 @@ void PlayScene::actionShowValue()
                 dynamic_cast<CellView*>(child)->showFootFrint();
             }
         }
-        _isInitChessing = false;
+        _container->setEnabled(true);
     }
 }
 
@@ -106,7 +100,6 @@ int PlayScene::getRandomIndex()
 
 void PlayScene::handleCellClick(const string &value)
 {
-    if (_isInitChessing) return;
     auto findResult = find(_curLevelElements.begin(), _curLevelElements.end(), value);
     if (findResult == _curLevelElements.end()) {
         return;
@@ -115,6 +108,19 @@ void PlayScene::handleCellClick(const string &value)
     if (_curLevelElements.empty()) {
         initChessBoard();
     }
+}
+
+void PlayScene::reset()
+{
+    for (auto cell : _cellMaps) {
+        cell.second.value = "";
+    }
+    for (auto child : _container->getChildren()) {
+        if (dynamic_cast<CellView*>(child)) {
+            dynamic_cast<CellView*>(child)->clear();
+        }
+    }
+    _actionShow.clear();
 }
 
 //================== CellView ==================
@@ -140,61 +146,45 @@ _cbResult(cbResult)
 
 bool CellView::init()
 {
-    if (!Layout::init()) {
+    if (!Layer::init()) {
         return false;
     }
     setContentSize(Size(_w, _h));
-    setTouchEnabled(true);
-    addTouchEventListener([&](Ref* sender, Widget::TouchEventType type) {
+    auto node = CSLoader::createNode("CellViewComp.csb");
+    node->setContentSize(getContentSize());
+    Helper::doLayout(node);
+    addChild(node);
+    
+    auto main = dynamic_cast<Layout*>(node->getChildByName("Main"));
+    main->addTouchEventListener([&](Ref* sender, Widget::TouchEventType type) {
         if (type == Widget::TouchEventType::ENDED) {
             if (_cbResult && !_value.empty()) {
-                hideFootPrint();
                 _cbResult(_value);
+                clear();
             }
         }
     });
+    _tValue = dynamic_cast<Text*>(main->getChildByName("tValue"));
+    _footIcon = main->getChildByName("footIcon");
     return true;
 }
 
 void CellView::showValue(const string &key, const function<void()> &cbDelayComplete)
 {
     _value = key;
-    auto spr = Assets::getIns()->getElementsByID(key);
-    addChild(spr, 0);
-    spr->setName(_value);
-    spr->setScale(3);
-    spr->setPosition(Vec2(spr->getContentSize().width/2, spr->getContentSize().height/2));
+    _tValue->setString(key);
     this->runAction(Sequence::create(DelayTime::create(Config::getIns()->getDelayTime()), CallFunc::create(cbDelayComplete), NULL));
 }
 
 void CellView::showFootFrint()
 {
-    if (_value.empty()) {
-        return;
-    }
-    hideFootPrint();
-    auto footIcon = Assets::getIns()->getFootIcon();
-    addChild(footIcon);
-    footIcon->setScale(5);
-    footIcon->setPosition(Vec2(footIcon->getContentSize().width/2, footIcon->getContentSize().height/2));
-    footIcon->setName(FOOT_ICON);
-}
-
-void CellView::hideFootPrint()
-{
-    if (this->getChildByName(FOOT_ICON)) {
-        this->removeChildByName(FOOT_ICON);
-    }
+    if (_value.empty()) return;
+    _footIcon->setVisible(true);
 }
 
 void CellView::clear()
 {
-    if (_value.empty()) {
-        return;
-    }
-    hideFootPrint();
-    if (this->getChildByName(_value)) {
-        this->removeChildByName(_value);
-    }
+    _tValue->setString("");
+    _footIcon->setVisible(false);
     _value = "";
 }

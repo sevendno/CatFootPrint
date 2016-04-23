@@ -2,6 +2,7 @@
 #include "StartScene.h"
 #include "Config.h"
 #include "Assets.h"
+#include "HelloWorldScene.h"
 USING_NS_CC;
 using namespace CatFootPrint;
 
@@ -47,6 +48,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     Assets::getIns()->Setup();
     // create a scene. it's an autorelease object
     auto scene = StartScene::create();
+//    auto scene = HelloWorld::createScene();
 
     // run
     director->runWithScene(scene);

@@ -84,8 +84,15 @@ bool HelloWorld::init()
         return false;
     }
     
-    auto rootNode = CSLoader::createNode("MainScene.csb");
-
+    auto rootNode = CSLoader::createNode("CellViewComp.csb");
+//    rootNode->setContentSize(Size(500, 500));
+    auto main = rootNode->getChildByName("Main");
+    rootNode->setContentSize(Size(500, 500));
+    
+//    Size frameSize = Director::getInstance()->getVisibleSize();
+//    main->setContentSize(frameSize);
+    ui::Helper::doLayout(rootNode);
+    
     addChild(rootNode);
 
     return true;

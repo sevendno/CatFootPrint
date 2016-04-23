@@ -8,6 +8,7 @@
 
 #include "StartScene.h"
 #include "PlayScene.h"
+#include "HelpScene.h"
 using namespace CatFootPrint;
 
 bool StartScene::init()
@@ -23,5 +24,9 @@ void StartScene::initView()
 {
     initButton(dynamic_cast<Widget*>(_mainUI->getChildByName("Main")), [&]() {
         replaceScene(PlayScene::create());
+    });
+    
+    initButton(dynamic_cast<Button*>(_mainUI->getChildByName("Main")->getChildByName("rightPanel")->getChildByName("btn_help")), [&]() {
+        replaceScene(HelpScene::create());
     });
 }

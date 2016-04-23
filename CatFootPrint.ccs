@@ -7,7 +7,10 @@
         <Project Name="HelpScene.csd" Type="Scene" />
         <Project Name="PlayScene.csd" Type="Scene" />
         <Project Name="StartScene.csd" Type="Scene" />
-        <Project Name="test.csd" Type="Scene" />
+        <Folder Name="fonts">
+          <TTF Name="pixel12.ttf" />
+        </Folder>
+        <Project Name="CellViewComp.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>
