@@ -3,14 +3,15 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
+        <Folder Name="fonts">
+          <TTF Name="pixel12.ttf" />
+        </Folder>
+        <Image Name="Button_Normal.png" />
+        <Project Name="CellViewComp.csd" Type="Layer" />
         <Project Name="GameOverScene.csd" Type="Scene" />
         <Project Name="HelpScene.csd" Type="Scene" />
         <Project Name="PlayScene.csd" Type="Scene" />
         <Project Name="StartScene.csd" Type="Scene" />
-        <Folder Name="fonts">
-          <TTF Name="pixel12.ttf" />
-        </Folder>
-        <Project Name="CellViewComp.csd" Type="Layer" />
         <Project Name="TestScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
