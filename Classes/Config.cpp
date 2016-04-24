@@ -47,6 +47,9 @@ void Config::Setup()
     if (json.isMember("delayTime")) {
         _delayTime = json["delayTime"].asFloat();
     }
+    if (json.isMember("lives")) {
+        _lives = json["lives"].asInt();
+    }
     const int r = rand() % 256;
     const int g = rand() % 256;
     const int b = rand() % 256;

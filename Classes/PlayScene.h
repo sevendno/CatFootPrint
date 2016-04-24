@@ -27,10 +27,12 @@ namespace CatFootPrint
         void initChessBoard();
         void actionShowValue();
         void reset();
+        void updateLivePanel();
     private:
         Layout* _container = nullptr;
         Node* _rightPanel = nullptr;
         int _level = 0;
+        int _curLives = 0;
         vector<ElementsVO> _actionShow;
         vector<ElementsVO> _curLevelElements;
     };

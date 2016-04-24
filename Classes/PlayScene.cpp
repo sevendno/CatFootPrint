@@ -43,6 +43,8 @@ void PlayScene::initView()
         itemView->setTag(index);
         index++;
     }
+    _curLives = Config::getIns()->getLives();
+    updateLivePanel();
     
     initChessBoard();
 }
@@ -54,6 +56,9 @@ void PlayScene::initChessBoard()
     _curLevelElements = Config::getIns()->getElements(_level);
     _actionShow = _curLevelElements;
     actionShowValue();
+    if (_level > 3) {
+        _mainUI->getChildByName("Main")->getChildByName("tMsg")->setVisible(false);
+    }
 }
 
 void PlayScene::actionShowValue()
@@ -78,6 +83,14 @@ void PlayScene::actionShowValue()
 
 void PlayScene::handleCellClick(const string &value)
 {
+    if (value.empty()) return;
+    bool clickResult = false;
+    if (!_curLevelElements.empty()) {
+        auto vo = _curLevelElements.front();
+        if (value == vo.elementID) {
+            clickResult = true;
+        }
+    }
     for(auto it=_curLevelElements.begin(); it!=_curLevelElements.end(); ) {
         if((* it).elementID == value) {
             it = _curLevelElements.erase(it);
@@ -85,8 +98,25 @@ void PlayScene::handleCellClick(const string &value)
             ++it;
         }
     }
+    if (!clickResult) {
+        _curLives--;
+        updateLivePanel();
+        if (_curLives <= 0) {
+            BaseScene::gotoScene(SCENE_TYPE::GAMEOVER);
+            return;
+        }
+    }
     if (_curLevelElements.empty()) {
         initChessBoard();
+    }
+}
+
+void PlayScene::updateLivePanel()
+{
+    auto bar = _mainUI->getChildByName("Main")->getChildByName("rightPanel")->getChildByName("bar");
+    for (auto child : bar->getChildren()) {
+        const int childIndex = atoi(child->getName().substr(4,1).c_str());
+        child->setVisible(_curLives >= childIndex);
     }
 }
 

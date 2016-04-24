@@ -26,6 +26,7 @@ namespace CatFootPrint
         int getCellCount() const { return _cellCount; };
         int getTotalCellCount() const { return _cellCount*_cellCount; };
         int getLevelTimes() const { return _levelTimes; };
+        int getLives() const { return _lives; };
         float getDelayTime() const { return _delayTime; };
         string getMusicPath() const { return _musciPath; };
         string getLanguage(const string &key) const;
@@ -41,6 +42,7 @@ namespace CatFootPrint
         int _cellCount = 0;
         int _levelTimes = 0;
         float _delayTime = 0.0;
+        int _lives = 0;
         string _musciPath = "";
         string _assetsPath = "";
         Color4B _color4b;

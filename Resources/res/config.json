@@ -10,24 +10,11 @@
         "8":["1","2","3","4","5","6","7","8","9","10"],
         "9":["1","2","3","4","5","6","7","8","9","10","11"]
     },
-    
     "levelTimes":"3",
-    
     "musicID":"music.mp3",
-    
     "soundClick":"",
-    
     "cellCount":"6",
-    
-    "language":{
-        "btn_start":"Tap to Start",
-        "btn_back":"Back",
-        "btn_shared":"Share",
-        "btn_sound":"Sound ON/OFF",
-        "game_name":"Cat FootFrints"
-    },
-    
-    "delayTime":"0.5",
-    
-    "assetsID":"assets.plist"
+    "delayTime":"0.4",
+    "assetsID":"assets.plist",
+    "lives":"3"
 }

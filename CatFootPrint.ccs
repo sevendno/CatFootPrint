@@ -11,7 +11,7 @@
           <TTF Name="pixel12.ttf" />
         </Folder>
         <Project Name="CellViewComp.csd" Type="Layer" />
-        <Project Name="Scene.csd" Type="Scene" />
+        <Project Name="TestScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>
