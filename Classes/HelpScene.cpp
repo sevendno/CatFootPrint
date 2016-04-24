@@ -22,11 +22,11 @@ bool HelpScene::init()
 
 void HelpScene::initView()
 {
-    initButton(dynamic_cast<Button*>(_mainUI->getChildByName("btn_back")), [&]() {
-        replaceScene(StartScene::create());
+    initButton(dynamic_cast<Button*>(_mainUI->getChildByName("Main")->getChildByName("btn_back")), [&]() {
+        BaseScene::gotoScene(SCENE_TYPE::START);
     });
     
-    initButton(dynamic_cast<Button*>(_mainUI->getChildByName("btn_sound")), [&]() {
+    initButton(dynamic_cast<Button*>(_mainUI->getChildByName("Main")->getChildByName("btn_sound")), [&]() {
         Sounds::toggle();
     });
 }

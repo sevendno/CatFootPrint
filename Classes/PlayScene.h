@@ -9,14 +9,10 @@
 #ifndef PlayScene_h
 #define PlayScene_h
 #include "BaseScene.h"
+#include "Config.h"
 
 namespace CatFootPrint
 {
-    struct CellVO
-    {
-        int index = 0;
-        string value = "";
-    };
     class PlayScene : public BaseScene
     {
     public:
@@ -30,22 +26,20 @@ namespace CatFootPrint
         void handleCellClick(const string &value);
         void initChessBoard();
         void actionShowValue();
-        int getRandomIndex();
         void reset();
     private:
         Layout* _container = nullptr;
         Node* _rightPanel = nullptr;
-        map<int, CellVO> _cellMaps;
         int _level = 0;
-        vector<int> _actionShow;
-        vector<string> _curLevelElements;
+        vector<ElementsVO> _actionShow;
+        vector<ElementsVO> _curLevelElements;
     };
     
     class CellView : public Layer
     {
     public:
-        static CellView* create(int index, float w, float h, const function<void(const string &value)> &cbResult);
-        CellView(int index, float w, float h, const function<void(const string &value)> &cbResult);
+        static CellView* create(float w, float h, const function<void(const string &value)> &cbResult);
+        CellView(float w, float h, const function<void(const string &value)> &cbResult);
         ~CellView() {};
         virtual bool init() override;
         void showValue(const string& key, const function<void()> &cbDelayComplete);
@@ -54,7 +48,6 @@ namespace CatFootPrint
     private:
         float _w = 0.0;
         float _h = 0.0;
-        int _index = 0;
         string _value = "";
         Text* _tValue = nullptr;
         Node* _footIcon = nullptr;

@@ -13,6 +13,11 @@ using namespace cocos2d;
 using namespace std;
 namespace CatFootPrint
 {
+    struct ElementsVO
+    {
+        string elementID = "";
+        int childTag = 0;
+    };
     class Config
     {
     public:
@@ -26,10 +31,11 @@ namespace CatFootPrint
         string getLanguage(const string &key) const;
         string getAssetsPath() const { return _assetsPath; };
         Color4B getColor() const { return _color4b; };
-        vector<string> getElements(int level);
+        vector<ElementsVO> getElements(int level);
     private:
         Config() {};
         ~Config() {};
+        int getRandomIndex();
     private:
         static Config* _instance;
         int _cellCount = 0;

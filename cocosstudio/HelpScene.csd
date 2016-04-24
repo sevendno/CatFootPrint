@@ -9,14 +9,15 @@
           <AbstractNodeData Name="Main" ActionTag="-2107742666" Tag="9" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="640.0000" Y="1136.0000" />
             <Children>
-              <AbstractNodeData Name="btn_back" ActionTag="1490887704" Tag="12" IconVisible="False" LeftMargin="255.0508" RightMargin="338.9492" TopMargin="618.9589" BottomMargin="481.0411" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="46.0000" Y="36.0000" />
+              <AbstractNodeData Name="btn_back" ActionTag="1490887704" Tag="12" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="170.0000" RightMargin="170.0000" TopMargin="812.0000" BottomMargin="244.0000" TouchEnable="True" FontSize="32" ButtonText="返回" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="300.0000" Y="80.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="278.0508" Y="499.0411" />
+                <Position X="320.0000" Y="284.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4345" Y="0.4393" />
-                <PreSize X="0.0719" Y="0.0317" />
+                <PrePosition X="0.5000" Y="0.2500" />
+                <PreSize X="0.4688" Y="0.0704" />
+                <FontResource Type="Normal" Path="fonts/pixel12.ttf" Plist="" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
                 <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
@@ -24,18 +25,43 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btn_sound" ActionTag="1124307636" Tag="13" IconVisible="False" LeftMargin="258.6002" RightMargin="335.3998" TopMargin="731.4471" BottomMargin="368.5529" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="46.0000" Y="36.0000" />
+              <AbstractNodeData Name="btn_sound" ActionTag="1124307636" Tag="13" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="170.0000" RightMargin="170.0000" TopMargin="925.6000" BottomMargin="130.4000" TouchEnable="True" FontSize="32" ButtonText="声音 ON/OFF" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="300.0000" Y="80.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="281.6002" Y="386.5529" />
+                <Position X="320.0000" Y="170.4000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4400" Y="0.3403" />
-                <PreSize X="0.0719" Y="0.0317" />
+                <PrePosition X="0.5000" Y="0.1500" />
+                <PreSize X="0.4688" Y="0.0704" />
+                <FontResource Type="Normal" Path="fonts/pixel12.ttf" Plist="" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
                 <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
                 <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="tTitle" ActionTag="-1028944706" Tag="29" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="64.0000" RightMargin="64.0000" TopMargin="319.3143" BottomMargin="616.6857" IsCustomSize="True" FontSize="36" LabelText="记住数字在屏幕上放置的位置，按顺序找出来。" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="512.0000" Y="200.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="320.0000" Y="716.6857" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.5000" Y="0.6309" />
+                <PreSize X="0.8000" Y="0.1761" />
+                <FontResource Type="Normal" Path="fonts/pixel12.ttf" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="tMsg" ActionTag="1735876731" Tag="30" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="109.5000" RightMargin="109.5000" TopMargin="554.0000" BottomMargin="554.0000" FontSize="28" LabelText="Game produced by sodalives.com" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="421.0000" Y="28.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="320.0000" Y="568.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.5000" Y="0.5000" />
+                <PreSize X="0.6578" Y="0.0246" />
+                <FontResource Type="Normal" Path="fonts/pixel12.ttf" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>

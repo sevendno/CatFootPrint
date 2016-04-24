@@ -61,16 +61,31 @@ string Config::getLanguage(const string &key) const
     return "";
 }
 
-vector<string> Config::getElements(int level)
+vector<ElementsVO> Config::getElements(int level)
 {
     const int elementsID = std::ceil(level*1.0f / _levelTimes);
-    vector<string> eles;
+    vector<ElementsVO> eles;
     if (!_elements.isMember(to_string(elementsID))) {
         return eles;
     }
     const Json::Value &elements = _elements[to_string(elementsID)];
+    map<int,int> childTagMap;
     for (const auto& element : elements) {
-        eles.push_back(element.asString());
+        int childTag = getRandomIndex();
+        while (childTagMap[childTag]) {
+            childTag = getRandomIndex();
+        }
+        childTagMap[childTag] = childTag;
+        
+        ElementsVO vo;
+        vo.elementID = element.asString();
+        vo.childTag = childTag;
+        eles.push_back(vo);
     }
     return eles;
+}
+
+int Config::getRandomIndex()
+{
+    return 1 + rand() % getTotalCellCount();
 }

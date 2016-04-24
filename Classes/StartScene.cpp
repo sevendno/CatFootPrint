@@ -23,10 +23,10 @@ bool StartScene::init()
 void StartScene::initView()
 {
     initButton(dynamic_cast<Widget*>(_mainUI->getChildByName("Main")), [&]() {
-        replaceScene(PlayScene::create());
+        BaseScene::gotoScene(SCENE_TYPE::PLAY);
     });
     
     initButton(dynamic_cast<Button*>(_mainUI->getChildByName("Main")->getChildByName("rightPanel")->getChildByName("btn_help")), [&]() {
-        replaceScene(HelpScene::create());
+        BaseScene::gotoScene(SCENE_TYPE::HELP);
     });
 }

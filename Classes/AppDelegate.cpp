@@ -1,4 +1,5 @@
 #include "AppDelegate.h"
+#include "BaseScene.h"
 #include "StartScene.h"
 #include "Config.h"
 #include "Assets.h"
@@ -44,15 +45,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     FileUtils::getInstance()->addSearchPath("res");
 
-    Config::getIns()->Setup();
-    Assets::getIns()->Setup();
-    // create a scene. it's an autorelease object
-    auto scene = StartScene::create();
-//    auto scene = HelloWorld::createScene();
-
-    // run
-    director->runWithScene(scene);
-
+    enterGame();
     return true;
 }
 
@@ -67,10 +60,15 @@ void AppDelegate::applicationDidEnterBackground() {
 // this function will be called when the app is active again
 void AppDelegate::applicationWillEnterForeground() {
     Director::getInstance()->startAnimation();
-
-    Config::getIns()->Setup();
-    Director::getInstance()->replaceScene(StartScene::create());
     
+    enterGame();
     // if you use SimpleAudioEngine, it must resume here
     // SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
+}
+
+void AppDelegate::enterGame()
+{
+    Config::getIns()->Setup();
+    Assets::getIns()->Setup();
+    Director::getInstance()->replaceScene(StartScene::create());
 }

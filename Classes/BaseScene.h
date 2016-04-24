@@ -16,16 +16,18 @@ using namespace std;
 
 namespace CatFootPrint
 {
+    enum class SCENE_TYPE {START, PLAY, HELP, GAMEOVER};
     class BaseScene : public Scene
     {
     public:
         BaseScene() {};
         ~BaseScene() {};
+        static void gotoScene(SCENE_TYPE type);
+        virtual void onEnter() override;
     protected:
         virtual void initView() = 0;
         void loadUI(const string &filename);
         void initButton(Widget* widget, const function<void()> &cbClick);
-        void replaceScene(Scene* scene);
     protected:
         Node* _mainUI = nullptr;
     };

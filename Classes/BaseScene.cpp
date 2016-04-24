@@ -7,6 +7,10 @@
 //
 
 #include "BaseScene.h"
+#include "StartScene.h"
+#include "PlayScene.h"
+#include "HelpScene.h"
+#include "GameOverScene.h"
 #include "cocostudio/CocoStudio.h"
 #include "Config.h"
 using namespace CatFootPrint;
@@ -19,6 +23,10 @@ void BaseScene::initButton(cocos2d::ui::Widget *widget, const function<void()> &
                 if(cbClick) cbClick();
             }
         });
+        if (dynamic_cast<Button*>(widget)) {
+            const Color4B configColor = Config::getIns()->getColor();
+            dynamic_cast<Button*>(widget)->setTitleColor(Color3B(configColor.r, configColor.g, configColor.b));
+        }
     }
 }
 
@@ -33,13 +41,34 @@ void BaseScene::loadUI(const string &filename)
     LayerColor* colorBg = LayerColor::create(Config::getIns()->getColor());
     colorBg->setContentSize(_mainUI->getContentSize());
     addChild(colorBg, 0);
+}
+
+void BaseScene::onEnter()
+{
+    Scene::onEnter();
     initView();
 }
 
-void BaseScene::replaceScene(cocos2d::Scene *scene)
+void BaseScene::gotoScene(CatFootPrint::SCENE_TYPE type)
 {
-    if (!scene) {
-        return;
+    const float delayTime = 0.5f;
+    Scene* scene = nullptr;
+    switch (type) {
+        case SCENE_TYPE::START:
+            scene = TransitionFade::create(delayTime, StartScene::create());//TransitionFadeDown
+            break;
+        case SCENE_TYPE::PLAY:
+            scene = TransitionFade::create(delayTime, PlayScene::create());
+            break;
+        case SCENE_TYPE::HELP:
+            scene = TransitionFade::create(delayTime, HelpScene::create());
+            break;
+        case SCENE_TYPE::GAMEOVER:
+            scene = TransitionFade::create(delayTime, GameOverScene::create());
+            break;
+        default:
+            break;
     }
+    if (!scene) return;
     Director::getInstance()->replaceScene(scene);
 }
