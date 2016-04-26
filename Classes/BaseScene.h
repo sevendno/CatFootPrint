@@ -22,7 +22,7 @@ namespace CatFootPrint
     public:
         BaseScene() {};
         ~BaseScene() {};
-        static void gotoScene(SCENE_TYPE type);
+        static void gotoScene(SCENE_TYPE type, int score = 0);
         virtual void onEnter() override;
     protected:
         virtual void initView() = 0;

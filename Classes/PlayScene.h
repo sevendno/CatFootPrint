@@ -33,8 +33,11 @@ namespace CatFootPrint
         Node* _rightPanel = nullptr;
         int _level = 0;
         int _curLives = 0;
+        int _score = 0;
         vector<ElementsVO> _actionShow;
         vector<ElementsVO> _curLevelElements;
+        map<int, string> _orderMaps;
+        int _order = 0;
     };
     
     class CellView : public Layer

@@ -7,7 +7,19 @@
 //
 
 #include "GameOverScene.h"
+#include "Config.h"
 using namespace CatFootPrint;
+
+GameOverScene* GameOverScene::create(int score)
+{
+    auto ret = new GameOverScene(score);
+    if (ret && ret->init()) {
+        ret->autorelease();
+    } else {
+        CC_SAFE_DELETE(ret);
+    }
+    return ret;
+}
 
 bool GameOverScene::init()
 {
@@ -20,5 +32,29 @@ bool GameOverScene::init()
 
 void GameOverScene::initView()
 {
+    initButton(dynamic_cast<Button*>(_mainUI->getChildByName("Main")->getChildByName("btn_retry")), [&]() {
+        BaseScene::gotoScene(SCENE_TYPE::START);
+    });
+    initButton(dynamic_cast<Button*>(_mainUI->getChildByName("Main")->getChildByName("btn_shared")), [&]() {
+        
+    });
+    auto panel = _mainUI->getChildByName("Main")->getChildByName("panelscore")->getChildByName("bg");
+    setTextColor(panel->getChildByName("tScoreTitle"));
+    setTextColor(panel->getChildByName("tScore"), to_string(_score));
+    setTextColor(panel->getChildByName("tBestTitle"));
     
+    const string key = "CatBestScore";
+    if (UserDefault::getInstance()->getIntegerForKey(key.c_str()) < _score) {
+        UserDefault::getInstance()->setIntegerForKey(key.c_str(), _score);
+    }
+    setTextColor(panel->getChildByName("tBest"), to_string(UserDefault::getInstance()->getIntegerForKey(key.c_str())));
+}
+
+void GameOverScene::setTextColor(cocos2d::Node *text, const string &value)
+{
+    if (!text) return;
+    dynamic_cast<Text*>(text)->setTextColor(Config::getIns()->getColor());
+    if (!value.empty()) {
+        dynamic_cast<Text*>(text)->setString(value);
+    }
 }

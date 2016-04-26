@@ -49,7 +49,7 @@ void BaseScene::onEnter()
     initView();
 }
 
-void BaseScene::gotoScene(CatFootPrint::SCENE_TYPE type)
+void BaseScene::gotoScene(CatFootPrint::SCENE_TYPE type, int score)
 {
     const float delayTime = 0.5f;
     Scene* scene = nullptr;
@@ -64,7 +64,7 @@ void BaseScene::gotoScene(CatFootPrint::SCENE_TYPE type)
             scene = TransitionFade::create(delayTime, HelpScene::create());
             break;
         case SCENE_TYPE::GAMEOVER:
-            scene = TransitionFade::create(delayTime, GameOverScene::create());
+            scene = TransitionFade::create(delayTime, GameOverScene::create(score));
             break;
         default:
             break;

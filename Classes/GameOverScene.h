@@ -15,12 +15,16 @@ namespace CatFootPrint
     class GameOverScene : public BaseScene
     {
     public:
-        CREATE_FUNC(GameOverScene);
-        GameOverScene() {};
+        static GameOverScene* create(int score);
+        GameOverScene(int score) { _score = score; };
         ~GameOverScene() {};
         virtual bool init() override;
     protected:
         virtual void initView() override;
+    private:
+        void setTextColor(Node* text, const string &value="");
+    private:
+        int _score = 0;
     };
 }
 
