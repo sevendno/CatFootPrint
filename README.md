@@ -5,7 +5,7 @@ Written in cocos2dx-3.10, C++
 # Publish
 Apple Store And Android
 #TODO:
-* 背景音乐
+* 背景音乐,按钮音效
 * StartScene的名字和布局
 * PlayScene开始做个延迟处理
 * PlayScene中，正确和错误的特效（白色背景闪一下）
