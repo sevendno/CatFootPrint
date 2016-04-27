@@ -4,7 +4,7 @@ A kind of memory game
 Written in cocos2dx-3.10, C++
 # Publish
 Apple Store And Android
-#TODO
+#TODO:
 * 背景音乐
 * StartScene的名字和布局
 * PlayScene开始做个延迟处理
