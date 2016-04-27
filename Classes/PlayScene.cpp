@@ -23,6 +23,9 @@ bool PlayScene::init()
 
 void PlayScene::initView()
 {
+    runAction(Sequence::create(DelayTime::create(0.8f), CallFunc::create([&]() {
+        initChessBoard();
+    }), NULL));
     _container = dynamic_cast<Layout*>(_mainUI->getChildByName("Main")->getChildByName("container"));
     _rightPanel = _mainUI->getChildByName("Main")->getChildByName("rightPanel");
     
@@ -46,8 +49,6 @@ void PlayScene::initView()
     _score = 0;
     _curLives = Config::getIns()->getLives();
     updateLivePanel();
-    
-    initChessBoard();
 }
 
 void PlayScene::initChessBoard()
@@ -183,6 +184,7 @@ bool CellView::init()
     });
     _tValue = dynamic_cast<Text*>(main->getChildByName("tValue"));
     _footIcon = main->getChildByName("footIcon");
+    clear();
     return true;
 }
 

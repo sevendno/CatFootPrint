@@ -33,6 +33,7 @@ namespace CatFootPrint
         string getAssetsPath() const { return _assetsPath; };
         Color4B getColor() const { return _color4b; };
         vector<ElementsVO> getElements(int level);
+        string getSoundClickID() const { return _soundClickID; };
     private:
         Config() {};
         ~Config() {};
@@ -45,6 +46,7 @@ namespace CatFootPrint
         int _lives = 0;
         string _musciPath = "";
         string _assetsPath = "";
+        string _soundClickID = "";
         Color4B _color4b;
         Json::Value _language;
         Json::Value _elements;

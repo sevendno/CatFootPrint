@@ -8,6 +8,7 @@
 
 #include "BaseScene.h"
 #include "StartScene.h"
+#include "Sounds.h"
 #include "PlayScene.h"
 #include "HelpScene.h"
 #include "GameOverScene.h"
@@ -21,6 +22,7 @@ void BaseScene::initButton(cocos2d::ui::Widget *widget, const function<void()> &
         widget->addTouchEventListener([cbClick](Ref* sender, Widget::TouchEventType type) {
             if (type == Widget::TouchEventType::ENDED) {
                 if(cbClick) cbClick();
+                Sounds::click();
             }
         });
         if (dynamic_cast<Button*>(widget)) {

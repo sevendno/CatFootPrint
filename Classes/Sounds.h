@@ -15,6 +15,8 @@ namespace CatFootPrint
     {
     public:
         static void toggle();
+        static void playMusic();
+        static void click();
     };
 }
 

@@ -50,10 +50,28 @@ void Config::Setup()
     if (json.isMember("lives")) {
         _lives = json["lives"].asInt();
     }
-    const int r = rand() % 256;
-    const int g = rand() % 256;
-    const int b = rand() % 256;
-    _color4b = Color4B(r, g, b, 255);
+    if (json.isMember("soundClickID")) {
+        _soundClickID = json["soundClickID"].asString();
+    }
+    if (json.isMember("musicID")) {
+        _musciPath = json["musicID"].asString();
+    }
+    if (json.isMember("colors")) {
+        const Json::Value &colors = json["colors"];
+        const int count = (int)colors.size();
+        const int randIndex = rand() % count + 1;
+        
+        if (colors.isMember(to_string(randIndex))) {
+            _color4b = Color4B(colors[to_string(randIndex)][0].asInt(),
+                               colors[to_string(randIndex)][1].asInt(),
+                               colors[to_string(randIndex)][2].asInt(), 255);
+        }
+    } else {
+        const int r = rand() % 256;
+        const int g = rand() % 256;
+        const int b = rand() % 256;
+        _color4b = Color4B(r, g, b, 255);
+    }
 }
 
 string Config::getLanguage(const string &key) const

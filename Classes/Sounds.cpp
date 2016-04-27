@@ -6,6 +6,7 @@
 //
 //
 
+#include "Config.h"
 #include "Sounds.h"
 #include "cocos2d.h"
 #include "audio/include/SimpleAudioEngine.h"
@@ -20,5 +21,22 @@ void Sounds::toggle()
     openState = !openState;
     UserDefault::getInstance()->setBoolForKey(SOUND_KEY.c_str(), openState);
     
-    SimpleAudioEngine::getInstance()->playBackgroundMusic("");
+    playMusic();
 }
+
+void Sounds::playMusic()
+{
+    if (UserDefault::getInstance()->getBoolForKey(SOUND_KEY.c_str())) {
+        SimpleAudioEngine::getInstance()->playBackgroundMusic(Config::getIns()->getMusicPath().c_str());
+    } else {
+        SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+    }
+}
+
+void Sounds::click()
+{
+    if (UserDefault::getInstance()->getBoolForKey(SOUND_KEY.c_str())) {
+        SimpleAudioEngine::getInstance()->playEffect(Config::getIns()->getSoundClickID().c_str());
+    }
+}
+

@@ -3,6 +3,7 @@
 #include "StartScene.h"
 #include "Config.h"
 #include "Assets.h"
+#include "Sounds.h"
 #include "HelloWorldScene.h"
 USING_NS_CC;
 using namespace CatFootPrint;
@@ -70,5 +71,6 @@ void AppDelegate::enterGame()
 {
     Config::getIns()->Setup();
     Assets::getIns()->Setup();
+    Sounds::playMusic();
     Director::getInstance()->replaceScene(StartScene::create());
 }
