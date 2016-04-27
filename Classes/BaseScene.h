@@ -30,6 +30,8 @@ namespace CatFootPrint
         void initButton(Widget* widget, const function<void()> &cbClick);
     protected:
         Node* _mainUI = nullptr;
+        NodeGrid* _gridNode = nullptr;
+    private:
     };
 }
 

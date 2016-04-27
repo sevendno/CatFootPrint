@@ -29,4 +29,6 @@ void StartScene::initView()
     initButton(dynamic_cast<Button*>(_mainUI->getChildByName("Main")->getChildByName("rightPanel")->getChildByName("btn_help")), [&]() {
         BaseScene::gotoScene(SCENE_TYPE::HELP);
     });
+    
+//    _gridNode->runAction(TurnOffTiles::create(1.0f, Size(48, 32)));
 }
