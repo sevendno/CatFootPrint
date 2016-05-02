@@ -34,8 +34,6 @@ public:
     @param  the pointer of the application
     */
     virtual void applicationWillEnterForeground();
-private:
-    void enterGame();
 };
 
 #endif // _APP_DELEGATE_H_

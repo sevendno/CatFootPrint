@@ -6,9 +6,9 @@
 //
 //
 
+#include "Global.h"
 #include "BaseScene.h"
 #include "StartScene.h"
-#include "Sounds.h"
 #include "PlayScene.h"
 #include "HelpScene.h"
 #include "GameOverScene.h"
@@ -22,12 +22,11 @@ void BaseScene::initButton(cocos2d::ui::Widget *widget, const function<void()> &
         widget->addTouchEventListener([cbClick](Ref* sender, Widget::TouchEventType type) {
             if (type == Widget::TouchEventType::ENDED) {
                 if(cbClick) cbClick();
-                Sounds::click();
+                GLOBAL->GetSoundCtrl()->playSound(SoundCtrl::SOUNDID_CLICK.c_str());
             }
         });
         if (dynamic_cast<Button*>(widget)) {
-            const Color4B configColor = Config::getIns()->getColor();
-            dynamic_cast<Button*>(widget)->setTitleColor(Color3B(configColor.r, configColor.g, configColor.b));
+            dynamic_cast<Button*>(widget)->setTitleColor(GLOBAL->GetConfigVO()->getDefaultColor());
         }
     }
 }
@@ -44,7 +43,7 @@ void BaseScene::loadUI(const string &filename)
     _mainUI = CSLoader::createNodeWithVisibleSize(filename + ".csb");
     _gridNode->addChild(_mainUI, 1);
     
-    LayerColor* colorBg = LayerColor::create(Config::getIns()->getColor());
+    LayerColor* colorBg = LayerColor::create(Color4B(GLOBAL->GetConfigVO()->getDefaultColor()));
     colorBg->setContentSize(_mainUI->getContentSize());
     _gridNode->addChild(colorBg, 0);
 }

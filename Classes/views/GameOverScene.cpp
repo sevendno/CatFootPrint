@@ -7,7 +7,7 @@
 //
 
 #include "GameOverScene.h"
-#include "Config.h"
+#include "Global.h"
 using namespace CatFootPrint;
 
 GameOverScene* GameOverScene::create(int score)
@@ -53,7 +53,7 @@ void GameOverScene::initView()
 void GameOverScene::setTextColor(cocos2d::Node *text, const string &value)
 {
     if (!text) return;
-    dynamic_cast<Text*>(text)->setTextColor(Config::getIns()->getColor());
+    dynamic_cast<Text*>(text)->setTextColor(Color4B(GLOBAL->GetConfigVO()->getDefaultColor()));
     if (!value.empty()) {
         dynamic_cast<Text*>(text)->setString(value);
     }

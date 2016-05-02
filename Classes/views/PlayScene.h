@@ -9,7 +9,8 @@
 #ifndef PlayScene_h
 #define PlayScene_h
 #include "BaseScene.h"
-#include "Config.h"
+#include "Global.h"
+#include "ConfigVO.h"
 
 namespace CatFootPrint
 {

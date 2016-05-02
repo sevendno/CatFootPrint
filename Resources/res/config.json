@@ -23,7 +23,7 @@
         "10":["127","127","127"]
     },
     "levelTimes":"3",
-    "musicID":"musicZorro.mp3",
+    "bgMusicID":"musicZorro.mp3",
     "soundClickID":"clickWavShort.wav",
     "cellCount":"6",
     "delayTime":"0.4",

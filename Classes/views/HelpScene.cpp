@@ -8,7 +8,7 @@
 
 #include "HelpScene.h"
 #include "StartScene.h"
-#include "Sounds.h"
+#include "Global.h"
 using namespace CatFootPrint;
 
 bool HelpScene::init()
@@ -27,6 +27,6 @@ void HelpScene::initView()
     });
     
     initButton(dynamic_cast<Button*>(_mainUI->getChildByName("Main")->getChildByName("btn_sound")), [&]() {
-        Sounds::toggle();
+        GLOBAL->GetSoundCtrl()->toggle();
     });
 }

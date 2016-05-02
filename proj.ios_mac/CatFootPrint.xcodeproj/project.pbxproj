@@ -11,8 +11,6 @@
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		21AC30591CC12C6400500E06 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AC30571CC12C6400500E06 /* Config.cpp */; };
-		21AC305A1CC12C6400500E06 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AC30571CC12C6400500E06 /* Config.cpp */; };
 		21AC30911CC13A5400500E06 /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 21AC30861CC13A5400500E06 /* json_internalarray.inl */; };
 		21AC30921CC13A5400500E06 /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 21AC30861CC13A5400500E06 /* json_internalarray.inl */; };
 		21AC30931CC13A5400500E06 /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 21AC30871CC13A5400500E06 /* json_internalmap.inl */; };
@@ -25,8 +23,6 @@
 		21AC309A1CC13A5400500E06 /* json_valueiterator.inl in Resources */ = {isa = PBXBuildFile; fileRef = 21AC308B1CC13A5400500E06 /* json_valueiterator.inl */; };
 		21AC309B1CC13A5400500E06 /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AC308C1CC13A5400500E06 /* json_writer.cpp */; };
 		21AC309C1CC13A5400500E06 /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AC308C1CC13A5400500E06 /* json_writer.cpp */; };
-		21F735741CBFF565003C5299 /* Sounds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F735721CBFF565003C5299 /* Sounds.cpp */; };
-		21F735751CBFF565003C5299 /* Sounds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F735721CBFF565003C5299 /* Sounds.cpp */; };
 		21F9A3A21CD262240010DDDE /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F9A3981CD262240010DDDE /* BaseScene.cpp */; };
 		21F9A3A31CD262240010DDDE /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F9A3981CD262240010DDDE /* BaseScene.cpp */; };
 		21F9A3A41CD262240010DDDE /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F9A39A1CD262240010DDDE /* GameOverScene.cpp */; };
@@ -43,13 +39,13 @@
 		21F9A3B41CD2657D0010DDDE /* UserModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F9A3B11CD2657D0010DDDE /* UserModel.cpp */; };
 		21F9A3B71CD265AD0010DDDE /* Global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F9A3B51CD265AD0010DDDE /* Global.cpp */; };
 		21F9A3B81CD265AD0010DDDE /* Global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F9A3B51CD265AD0010DDDE /* Global.cpp */; };
+		21F9A3BB1CD4AACF0010DDDE /* SoundCtrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F9A3B91CD4AACF0010DDDE /* SoundCtrl.cpp */; };
+		21F9A3BC1CD4AACF0010DDDE /* SoundCtrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F9A3B91CD4AACF0010DDDE /* SoundCtrl.cpp */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
 		46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
-		46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
-		46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -132,8 +128,6 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* CatFootPrint-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CatFootPrint-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		21AC30571CC12C6400500E06 /* Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Config.cpp; sourceTree = "<group>"; };
-		21AC30581CC12C6400500E06 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		21AC307F1CC13A5400500E06 /* assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assertions.h; sourceTree = "<group>"; };
 		21AC30801CC13A5400500E06 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		21AC30811CC13A5400500E06 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
@@ -152,8 +146,6 @@
 		21AC308E1CC13A5400500E06 /* value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = value.h; sourceTree = "<group>"; };
 		21AC308F1CC13A5400500E06 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		21AC30901CC13A5400500E06 /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
-		21F735721CBFF565003C5299 /* Sounds.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sounds.cpp; sourceTree = "<group>"; };
-		21F735731CBFF565003C5299 /* Sounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sounds.h; sourceTree = "<group>"; };
 		21F9A3981CD262240010DDDE /* BaseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseScene.cpp; sourceTree = "<group>"; };
 		21F9A3991CD262240010DDDE /* BaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScene.h; sourceTree = "<group>"; };
 		21F9A39A1CD262240010DDDE /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverScene.cpp; sourceTree = "<group>"; };
@@ -170,12 +162,12 @@
 		21F9A3B21CD2657D0010DDDE /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		21F9A3B51CD265AD0010DDDE /* Global.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Global.cpp; sourceTree = "<group>"; };
 		21F9A3B61CD265AD0010DDDE /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		21F9A3B91CD4AACF0010DDDE /* SoundCtrl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundCtrl.cpp; sourceTree = "<group>"; };
+		21F9A3BA1CD4AACF0010DDDE /* SoundCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundCtrl.h; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B8419C43A87006E1F66 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		46880B8519C43A87006E1F66 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
-		46880B8719C43A87006E1F66 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -416,14 +408,10 @@
 			children = (
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
-				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
-				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
-				21F735721CBFF565003C5299 /* Sounds.cpp */,
-				21F735731CBFF565003C5299 /* Sounds.h */,
-				21AC30571CC12C6400500E06 /* Config.cpp */,
-				21AC30581CC12C6400500E06 /* Config.h */,
 				21F9A3B51CD265AD0010DDDE /* Global.cpp */,
 				21F9A3B61CD265AD0010DDDE /* Global.h */,
+				21F9A3B91CD4AACF0010DDDE /* SoundCtrl.cpp */,
+				21F9A3BA1CD4AACF0010DDDE /* SoundCtrl.h */,
 				21F9A3AC1CD2652C0010DDDE /* datas */,
 				21F9A3971CD262240010DDDE /* views */,
 			);
@@ -628,11 +616,9 @@
 				21F9A3AA1CD262240010DDDE /* StartScene.cpp in Sources */,
 				21AC30971CC13A5400500E06 /* json_value.cpp in Sources */,
 				21AC309B1CC13A5400500E06 /* json_writer.cpp in Sources */,
-				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				21F9A3AF1CD265520010DDDE /* ConfigVO.cpp in Sources */,
-				21F735741CBFF565003C5299 /* Sounds.cpp in Sources */,
-				21AC30591CC12C6400500E06 /* Config.cpp in Sources */,
+				21F9A3BB1CD4AACF0010DDDE /* SoundCtrl.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				21F9A3B71CD265AD0010DDDE /* Global.cpp in Sources */,
 				21F9A3A81CD262240010DDDE /* PlayScene.cpp in Sources */,
@@ -648,20 +634,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				21F9A3B41CD2657D0010DDDE /* UserModel.cpp in Sources */,
+				21F9A3BC1CD4AACF0010DDDE /* SoundCtrl.cpp in Sources */,
 				21AC30981CC13A5400500E06 /* json_value.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				21F9A3A51CD262240010DDDE /* GameOverScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
-				21AC305A1CC12C6400500E06 /* Config.cpp in Sources */,
 				21F9A3A71CD262240010DDDE /* HelpScene.cpp in Sources */,
 				21F9A3B01CD265520010DDDE /* ConfigVO.cpp in Sources */,
 				21F9A3A91CD262240010DDDE /* PlayScene.cpp in Sources */,
-				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				21AC309C1CC13A5400500E06 /* json_writer.cpp in Sources */,
 				21F9A3AB1CD262240010DDDE /* StartScene.cpp in Sources */,
 				21F9A3B81CD265AD0010DDDE /* Global.cpp in Sources */,
 				21F9A3A31CD262240010DDDE /* BaseScene.cpp in Sources */,
-				21F735751CBFF565003C5299 /* Sounds.cpp in Sources */,
 				21AC30961CC13A5400500E06 /* json_reader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

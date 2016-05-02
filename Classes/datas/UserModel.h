@@ -17,9 +17,13 @@ namespace CatFootPrint
         UserModel() {};
         ~UserModel() {};
     public:
+        void setCurrentScore(int score);
+        void toggleSoundState();
         bool isSoundOpend();
         bool isBeginner();
         int getBestScore();
+    private:
+        int _score = 0;
     };
 }
 

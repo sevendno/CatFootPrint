@@ -1,10 +1,5 @@
 #include "AppDelegate.h"
-#include "BaseScene.h"
-#include "StartScene.h"
-#include "Config.h"
-#include "Assets.h"
-#include "Sounds.h"
-#include "HelloWorldScene.h"
+#include "Global.h"
 USING_NS_CC;
 using namespace CatFootPrint;
 
@@ -32,7 +27,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLViewImpl::createWithRect("HelloCpp", Rect(0, 0, 960, 640));
+        glview = GLViewImpl::createWithRect("CatFootPrint", Rect(0, 0, 960, 640));
         director->setOpenGLView(glview);
     }
 
@@ -46,7 +41,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     FileUtils::getInstance()->addSearchPath("res");
 
-    enterGame();
+    GLOBAL->SetupGame();
     return true;
 }
 
@@ -62,15 +57,7 @@ void AppDelegate::applicationDidEnterBackground() {
 void AppDelegate::applicationWillEnterForeground() {
     Director::getInstance()->startAnimation();
     
-    enterGame();
+    GLOBAL->SetupGame();
     // if you use SimpleAudioEngine, it must resume here
     // SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
-}
-
-void AppDelegate::enterGame()
-{
-    Config::getIns()->Setup();
-    Assets::getIns()->Setup();
-    Sounds::playMusic();
-    Director::getInstance()->replaceScene(StartScene::create());
 }

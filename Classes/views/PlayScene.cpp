@@ -7,8 +7,7 @@
 //
 
 #include "PlayScene.h"
-#include "Config.h"
-#include "Assets.h"
+#include "Global.h"
 #include "cocostudio/CocoStudio.h"
 using namespace CatFootPrint;
 
@@ -32,8 +31,8 @@ void PlayScene::initView()
     const auto &winSize = Director::getInstance()->getWinSize();
     _container->setContentSize(Size(winSize.width, winSize.width));
     
-    const int rowCellCount = Config::getIns()->getCellCount();
-    const int totalCellCount = Config::getIns()->getTotalCellCount();
+    const int rowCellCount = GLOBAL->GetConfigVO()->getCellCount();
+    const int totalCellCount = GLOBAL->GetConfigVO()->getTotalCellCount();
     const int cellWidth = int(winSize.width*1.0f / rowCellCount);
     
     int index = 1;
@@ -47,7 +46,7 @@ void PlayScene::initView()
         index++;
     }
     _score = 0;
-    _curLives = Config::getIns()->getLives();
+    _curLives = GLOBAL->GetConfigVO()->getLives();
     updateLivePanel();
 }
 
@@ -55,7 +54,7 @@ void PlayScene::initChessBoard()
 {
     reset();
     _level++;
-    _curLevelElements = Config::getIns()->getElements(_level);
+    _curLevelElements = GLOBAL->GetConfigVO()->getElements(_level);
     _actionShow = _curLevelElements;
     
     _orderMaps.clear();
@@ -192,7 +191,7 @@ void CellView::showValue(const string &key, const function<void()> &cbDelayCompl
 {
     _value = key;
     _tValue->setString(key);
-    this->runAction(Sequence::create(DelayTime::create(Config::getIns()->getDelayTime()), CallFunc::create(cbDelayComplete), NULL));
+    this->runAction(Sequence::create(DelayTime::create(GLOBAL->GetConfigVO()->getDelayTime()), CallFunc::create(cbDelayComplete), NULL));
 }
 
 void CellView::showFootFrint()
