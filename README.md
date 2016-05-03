@@ -7,7 +7,6 @@ Apple Store And Android
 #TODO:
 * refactor:code
 * add nodeGrid effects to scene
-* 增加用户表来存储（此设备第一次登入与否，最好成绩，声音保存等）
 * StartScene的名字和布局
 * PlayScene中，正确和错误的特效（白色背景闪一下）
 * 微信分享（ios平台）
