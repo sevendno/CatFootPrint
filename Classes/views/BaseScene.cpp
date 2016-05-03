@@ -22,7 +22,7 @@ void BaseScene::initButton(cocos2d::ui::Widget *widget, const function<void()> &
         widget->addTouchEventListener([cbClick](Ref* sender, Widget::TouchEventType type) {
             if (type == Widget::TouchEventType::ENDED) {
                 if(cbClick) cbClick();
-                GLOBAL->GetSoundCtrl()->playSound(SoundCtrl::SOUNDID_CLICK.c_str());
+                GLOBAL->GetSoundCtrl()->playSound(ConfigVO::SOUND_ID::CLICK);
             }
         });
         if (dynamic_cast<Button*>(widget)) {
@@ -40,7 +40,7 @@ void BaseScene::loadUI(const string &filename)
     _gridNode = NodeGrid::create(Rect(0, 0, Director::getInstance()->getWinSize().width, Director::getInstance()->getWinSize().height));
     addChild(_gridNode);
     
-    _mainUI = CSLoader::createNodeWithVisibleSize(filename + ".csb");
+    _mainUI = CSLoader::createNodeWithVisibleSize("csb/" + filename + ".csb");
     _gridNode->addChild(_mainUI, 1);
     
     LayerColor* colorBg = LayerColor::create(Color4B(GLOBAL->GetConfigVO()->getDefaultColor()));

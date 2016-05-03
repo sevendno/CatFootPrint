@@ -43,9 +43,12 @@ void GameOverScene::initView()
     setTextColor(panel->getChildByName("tScore"), to_string(_score));
     setTextColor(panel->getChildByName("tBestTitle"));
     
+    auto tPastBest = _mainUI->getChildByName("Main")->getChildByName("tPastBest");
+    tPastBest->setVisible(false);
     const string key = "CatBestScore";
     if (UserDefault::getInstance()->getIntegerForKey(key.c_str()) < _score) {
         UserDefault::getInstance()->setIntegerForKey(key.c_str(), _score);
+        tPastBest->setVisible(true);
     }
     setTextColor(panel->getChildByName("tBest"), to_string(UserDefault::getInstance()->getIntegerForKey(key.c_str())));
 }

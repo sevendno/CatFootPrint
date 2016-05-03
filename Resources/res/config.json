@@ -18,15 +18,14 @@
         "5":["139","105","20"],
         "6":["30","144","255"],
         "7":["165","42","42"],
-        "8":["173","216","230"],
+        "8":["110","36","32"],
         "9":["255","192","203"],
         "10":["127","127","127"]
     },
     "levelTimes":"3",
-    "bgMusicID":"musicZorro.mp3",
-    "soundClickID":"clickWavShort.wav",
+    "bgMusicID":"audio/musicZorro.mp3",
+    "soundClickID":"audio/clickWavShort.wav",
     "cellCount":"6",
-    "delayTime":"0.4",
-    "assetsID":"assets.plist",
+    "delayTime":"0.3",
     "lives":"3"
 }

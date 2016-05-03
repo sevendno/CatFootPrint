@@ -14,7 +14,6 @@ using namespace CatFootPrint;
 using namespace cocos2d;
 using namespace CocosDenshion;
 
-const string SoundCtrl::SOUNDID_CLICK = "clickWavShort.wav";
 SoundCtrl::SoundCtrl(const shared_ptr<UserModel> &model)
 :_model(model)
 {
@@ -23,6 +22,11 @@ SoundCtrl::SoundCtrl(const shared_ptr<UserModel> &model)
 void SoundCtrl::toggle()
 {
     _model->toggleSoundState();
+    playBgMusic();
+}
+
+void SoundCtrl::playBgMusic()
+{
     if (_model->isSoundOpend()) {
         SimpleAudioEngine::getInstance()->playBackgroundMusic(GLOBAL->GetConfigVO()->getBgMusicPath().c_str());
     } else {
@@ -30,9 +34,9 @@ void SoundCtrl::toggle()
     }
 }
 
-void SoundCtrl::playSound(const string &key)
+void SoundCtrl::playSound(ConfigVO::SOUND_ID id)
 {
     if (_model->isSoundOpend()) {
-        SimpleAudioEngine::getInstance()->playEffect(key.c_str());
+        SimpleAudioEngine::getInstance()->playEffect(GLOBAL->GetConfigVO()->getSoundByID(id).c_str());
     }
 }

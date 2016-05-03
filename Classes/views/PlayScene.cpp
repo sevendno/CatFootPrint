@@ -167,7 +167,7 @@ bool CellView::init()
         return false;
     }
     setContentSize(Size(_w, _h));
-    auto node = CSLoader::createNode("CellViewComp.csb");
+    auto node = CSLoader::createNode("csb/CellViewComp.csb");
     node->setContentSize(getContentSize());
     Helper::doLayout(node);
     addChild(node);

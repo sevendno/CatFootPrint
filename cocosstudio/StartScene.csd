@@ -22,9 +22,9 @@
                     <PreSize X="0.2500" Y="0.5000" />
                     <FontResource Type="Normal" Path="fonts/pixel12.ttf" Plist="" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                    <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-                    <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+                    <DisabledFileData Type="Normal" Path="csb/image/Button_Disable.png" Plist="" />
+                    <PressedFileData Type="Normal" Path="csb/image/Button_Press.png" Plist="" />
+                    <NormalFileData Type="Normal" Path="csb/image/Button_Normal.png" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>

@@ -19,9 +19,9 @@
                 <PreSize X="0.4688" Y="0.0704" />
                 <FontResource Type="Normal" Path="fonts/pixel12.ttf" Plist="" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-                <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+                <DisabledFileData Type="Normal" Path="csb/image/Button_Disable.png" Plist="" />
+                <PressedFileData Type="Normal" Path="csb/image/Button_Press.png" Plist="" />
+                <NormalFileData Type="Normal" Path="csb/image/Button_Normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -35,9 +35,9 @@
                 <PreSize X="0.4688" Y="0.0704" />
                 <FontResource Type="Normal" Path="fonts/pixel12.ttf" Plist="" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-                <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+                <DisabledFileData Type="Normal" Path="csb/image/Button_Disable.png" Plist="" />
+                <PressedFileData Type="Normal" Path="csb/image/Button_Press.png" Plist="" />
+                <NormalFileData Type="Normal" Path="csb/image/Button_Normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -56,7 +56,7 @@
               <AbstractNodeData Name="panelscore" ActionTag="1276345373" Tag="68" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="120.0000" RightMargin="120.0000" TopMargin="324.4000" BottomMargin="551.6000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="400.0000" Y="260.0000" />
                 <Children>
-                  <AbstractNodeData Name="bg" ActionTag="-399496110" Tag="69" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="bg" ActionTag="-399496110" Tag="69" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="0.0002" RightMargin="-0.0002" TopMargin="-0.0002" BottomMargin="0.0002" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ctype="ImageViewObjectData">
                     <Size X="400.0000" Y="260.0000" />
                     <Children>
                       <AbstractNodeData Name="tScoreTitle" ActionTag="1358143054" Tag="70" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="176.0000" RightMargin="176.0000" TopMargin="38.0000" BottomMargin="194.0000" FontSize="24" LabelText="成绩" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -105,12 +105,12 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="200.0000" Y="130.0000" />
+                    <Position X="200.0002" Y="130.0002" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
                     <PreSize X="1.0000" Y="1.0000" />
-                    <FileData Type="Normal" Path="Button_Normal.png" Plist="" />
+                    <FileData Type="Normal" Path="csb/image/bg.png" Plist="" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -123,6 +123,17 @@
                 <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="tPastBest" ActionTag="320407650" Tag="74" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="284.0001" RightMargin="283.9999" TopMargin="239.7064" BottomMargin="868.2936" FontSize="24" LabelText="破纪录" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="72.0000" Y="28.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="320.0001" Y="882.2936" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.5000" Y="0.7767" />
+                <PreSize X="0.1125" Y="0.0246" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint />

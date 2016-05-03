@@ -32,6 +32,7 @@ void Global::SetupGame()
     _userModel = make_shared<UserModel>();
     
     _soundCtrl = make_shared<SoundCtrl>(_userModel);
+    _soundCtrl->playBgMusic();
     
     Director::getInstance()->replaceScene(StartScene::create());
 }

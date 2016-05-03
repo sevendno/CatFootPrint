@@ -9,6 +9,7 @@
 #ifndef SoundCtrl_h
 #define SoundCtrl_h
 #include "datas/UserModel.h"
+#include "datas/ConfigVO.h"
 
 using namespace std;
 namespace CatFootPrint
@@ -16,11 +17,11 @@ namespace CatFootPrint
     class SoundCtrl
     {
     public:
-        static const string SOUNDID_CLICK;
         SoundCtrl(const shared_ptr<UserModel> &model);
         ~SoundCtrl() {};
         void toggle();
-        void playSound(const string &key);
+        void playSound(ConfigVO::SOUND_ID id);
+        void playBgMusic();
     private:
         shared_ptr<UserModel> _model = nullptr;
     };
