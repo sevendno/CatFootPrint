@@ -128,6 +128,9 @@ void PlayScene::updateLivePanel()
     for (auto child : bar->getChildren()) {
         const int childIndex = atoi(child->getName().substr(4,1).c_str());
         child->setVisible(_curLives >= childIndex);
+        
+        dynamic_cast<Layout*>(child)->setBackGroundColorType(Layout::BackGroundColorType::SOLID);
+        dynamic_cast<Layout*>(child)->setBackGroundColor(GLOBAL->GetConfigVO()->getDefaultColor());
     }
 }
 

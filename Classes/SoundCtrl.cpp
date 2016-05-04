@@ -28,7 +28,7 @@ void SoundCtrl::toggle()
 void SoundCtrl::playBgMusic()
 {
     if (_model->isSoundOpend()) {
-        SimpleAudioEngine::getInstance()->playBackgroundMusic(GLOBAL->GetConfigVO()->getBgMusicPath().c_str());
+        SimpleAudioEngine::getInstance()->playBackgroundMusic(GLOBAL->GetConfigVO()->getBgMusicPath().c_str(), true);
     } else {
         SimpleAudioEngine::getInstance()->stopBackgroundMusic();
     }

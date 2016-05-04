@@ -59,47 +59,51 @@
                   <AbstractNodeData Name="bg" ActionTag="-399496110" Tag="69" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="0.0002" RightMargin="-0.0002" TopMargin="-0.0002" BottomMargin="0.0002" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ctype="ImageViewObjectData">
                     <Size X="400.0000" Y="260.0000" />
                     <Children>
-                      <AbstractNodeData Name="tScoreTitle" ActionTag="1358143054" Tag="70" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="176.0000" RightMargin="176.0000" TopMargin="38.0000" BottomMargin="194.0000" FontSize="24" LabelText="成绩" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="48.0000" Y="28.0000" />
+                      <AbstractNodeData Name="tScoreTitle" ActionTag="1358143054" Tag="70" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="175.5000" RightMargin="175.5000" TopMargin="40.0000" BottomMargin="196.0000" FontSize="24" LabelText="成绩" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="49.0000" Y="24.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="200.0000" Y="208.0000" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="0" G="0" B="0" />
                         <PrePosition X="0.5000" Y="0.8000" />
-                        <PreSize X="0.1200" Y="0.1077" />
+                        <PreSize X="0.1225" Y="0.0923" />
+                        <FontResource Type="Normal" Path="fonts/pixel12.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="tScore" ActionTag="1352706271" Tag="71" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="145.0000" RightMargin="145.0000" TopMargin="82.2000" BottomMargin="149.8000" FontSize="24" LabelText="Text Label" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="110.0000" Y="28.0000" />
+                      <AbstractNodeData Name="tScore" ActionTag="1352706271" Tag="71" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="139.5000" RightMargin="139.5000" TopMargin="84.2000" BottomMargin="151.8000" FontSize="24" LabelText="Text Label" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="121.0000" Y="24.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="200.0000" Y="163.8000" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="0" G="0" B="0" />
                         <PrePosition X="0.5000" Y="0.6300" />
-                        <PreSize X="0.2750" Y="0.1077" />
+                        <PreSize X="0.3025" Y="0.0923" />
+                        <FontResource Type="Normal" Path="fonts/pixel12.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="tBestTitle" ActionTag="-1932155227" Tag="72" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="152.0000" RightMargin="152.0000" TopMargin="149.8000" BottomMargin="82.2000" FontSize="24" LabelText="最好成绩" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="96.0000" Y="28.0000" />
+                      <AbstractNodeData Name="tBestTitle" ActionTag="-1932155227" Tag="72" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="151.5000" RightMargin="151.5000" TopMargin="151.8000" BottomMargin="84.2000" FontSize="24" LabelText="最好成绩" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="97.0000" Y="24.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="200.0000" Y="96.2000" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="0" G="0" B="0" />
                         <PrePosition X="0.5000" Y="0.3700" />
-                        <PreSize X="0.2400" Y="0.1077" />
+                        <PreSize X="0.2425" Y="0.0923" />
+                        <FontResource Type="Normal" Path="fonts/pixel12.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="tBest" ActionTag="-876055233" Tag="73" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="145.0000" RightMargin="145.0000" TopMargin="194.0000" BottomMargin="38.0000" FontSize="24" LabelText="Text Label" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="110.0000" Y="28.0000" />
+                      <AbstractNodeData Name="tBest" ActionTag="-876055233" Tag="73" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="139.5000" RightMargin="139.5000" TopMargin="196.0000" BottomMargin="40.0000" FontSize="24" LabelText="Text Label" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="121.0000" Y="24.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="200.0000" Y="52.0000" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="0" G="0" B="0" />
                         <PrePosition X="0.5000" Y="0.2000" />
-                        <PreSize X="0.2750" Y="0.1077" />
+                        <PreSize X="0.3025" Y="0.0923" />
+                        <FontResource Type="Normal" Path="fonts/pixel12.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -124,14 +128,15 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="tPastBest" ActionTag="320407650" Tag="74" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="284.0001" RightMargin="283.9999" TopMargin="239.7064" BottomMargin="868.2936" FontSize="24" LabelText="破纪录" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="72.0000" Y="28.0000" />
+              <AbstractNodeData Name="tPastBest" ActionTag="320407650" Tag="74" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="277.5001" RightMargin="277.4999" TopMargin="239.7064" BottomMargin="868.2936" FontSize="28" LabelText="破纪录" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="85.0000" Y="28.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="320.0001" Y="882.2936" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.7767" />
-                <PreSize X="0.1125" Y="0.0246" />
+                <PreSize X="0.1328" Y="0.0246" />
+                <FontResource Type="Normal" Path="fonts/pixel12.ttf" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>

@@ -91,7 +91,7 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="tMsg" ActionTag="-1732170609" Tag="46" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="32.0000" RightMargin="32.0000" TopMargin="1054.2000" BottomMargin="31.8000" IsCustomSize="True" FontSize="28" LabelText="按照顺序依次点击数字出现的位置" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="tMsg" ActionTag="-1732170609" Tag="46" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="32.0000" RightMargin="32.0000" TopMargin="1054.2000" BottomMargin="31.8000" IsCustomSize="True" FontSize="26" LabelText="按照顺序依次点击数字出现的位置" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="576.0000" Y="50.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="320.0000" Y="56.8000" />
