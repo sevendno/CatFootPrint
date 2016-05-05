@@ -110,12 +110,14 @@ void PlayScene::handleCellClick(const string &value)
     if (!clickResult) {
         _curLives--;
         updateLivePanel();
+        GLOBAL->GetSoundCtrl()->playSound(ConfigVO::SOUND_ID::ERROR);
         if (_curLives <= 0) {
             BaseScene::gotoScene(SCENE_TYPE::GAMEOVER, _score);
             return;
         }
     } else {
         _score++;
+        GLOBAL->GetSoundCtrl()->playSound(ConfigVO::SOUND_ID::TRU);
     }
     if (_curLevelElements.empty()) {
         initChessBoard();

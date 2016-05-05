@@ -25,6 +25,9 @@
     "levelTimes":"3",
     "bgMusicID":"audio/musicZorro.mp3",
     "soundClickID":"audio/clickWavShort.wav",
+    "soundErrorID":"audio/boosterDing.wav",
+    "soundEndID":"audio/partyHorn_old.wav",
+    "soundTrueID":"audio/usePowerUpWavQuiet.wav",
     "cellCount":"6",
     "delayTime":"0.3",
     "lives":"3"

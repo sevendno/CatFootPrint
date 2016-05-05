@@ -30,5 +30,6 @@ void StartScene::initView()
         BaseScene::gotoScene(SCENE_TYPE::HELP);
     });
     
-//    _gridNode->runAction(TurnOffTiles::create(1.0f, Size(48, 32)));
+    const auto &size = Director::getInstance()->getWinSize();
+    _gridNode->runAction(RepeatForever::create(Ripple3D::create(4.0f, Size(32,24), Vec2(size.width/2,size.height/2), size.height, 10, 18)));
 }

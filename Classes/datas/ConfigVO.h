@@ -23,7 +23,7 @@ namespace CatFootPrint
     class ConfigVO
     {
     public:
-        enum class SOUND_ID { CLICK, WIN };
+        enum class SOUND_ID { CLICK, WIN, OVER, ERROR, TRU };
         ConfigVO(const Json::Value &data);
         ~ConfigVO() {};
         int getCellCount() const { return _cellCount; };

@@ -59,7 +59,18 @@ string ConfigVO::getSoundByID(CatFootPrint::ConfigVO::SOUND_ID id) const
         case SOUND_ID::CLICK:
             url = _data["soundClickID"].asString();
             break;
-            
+        case SOUND_ID::WIN:
+            url = _data["soundClickID"].asString();
+            break;
+        case SOUND_ID::ERROR:
+            url = _data["soundErrorID"].asString();
+            break;
+        case SOUND_ID::OVER:
+            url = _data["soundEndID"].asString();
+            break;
+        case SOUND_ID::TRU:
+            url = _data["soundTrueID"].asString();
+            break;
         default:
             break;
     }

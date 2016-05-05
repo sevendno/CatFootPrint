@@ -49,6 +49,8 @@ void GameOverScene::initView()
     if (UserDefault::getInstance()->getIntegerForKey(key.c_str()) < _score) {
         UserDefault::getInstance()->setIntegerForKey(key.c_str(), _score);
         tPastBest->setVisible(true);
+    } else {
+        GLOBAL->GetSoundCtrl()->playSound(ConfigVO::SOUND_ID::OVER);
     }
     setTextColor(panel->getChildByName("tBest"), to_string(UserDefault::getInstance()->getIntegerForKey(key.c_str())));
 }
