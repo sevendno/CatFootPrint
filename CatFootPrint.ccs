@@ -12,14 +12,13 @@
         <Project Name="PlayScene.csd" Type="Scene" />
         <Project Name="StartScene.csd" Type="Scene" />
         <Project Name="TestScene.csd" Type="Scene" />
-        <Folder Name="csb">
-          <Folder Name="image">
-            <Image Name="bg.png" />
-            <Image Name="Button_Disable.png" />
-            <Image Name="Button_Normal.png" />
-            <Image Name="Button_Press.png" />
-          </Folder>
+        <Folder Name="image">
+          <Image Name="bg.png" />
+          <Image Name="Button_Disable.png" />
+          <Image Name="Button_Normal.png" />
+          <Image Name="Button_Press.png" />
         </Folder>
+        <Project Name="AddPointsComp.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

@@ -40,7 +40,7 @@ void BaseScene::loadUI(const string &filename)
     _gridNode = NodeGrid::create(Rect(0, 0, Director::getInstance()->getWinSize().width, Director::getInstance()->getWinSize().height));
     addChild(_gridNode);
     
-    _mainUI = CSLoader::createNodeWithVisibleSize("csb/" + filename + ".csb");
+    _mainUI = CSLoader::createNodeWithVisibleSize(filename + ".csb");
     _gridNode->addChild(_mainUI, 1);
     
     LayerColor* colorBg = LayerColor::create(Color4B(GLOBAL->GetConfigVO()->getDefaultColor()));

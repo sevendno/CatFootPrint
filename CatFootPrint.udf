@@ -28,5 +28,19 @@
         <LastRunType Value="Mac" />
       </Value>
     </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="StartScene.csd" />
+          <FilePathData Path="HelpScene.csd" />
+          <FilePathData Path="PlayScene.csd" />
+          <FilePathData Path="CellViewComp.csd" />
+          <FilePathData Path="TestScene.csd" />
+          <FilePathData Path="GameOverScene.csd" />
+          <FilePathData Path="AddPointsComp.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="AddPointsComp.csd" />
+      </Value>
+    </Item>
   </Properties>
 </UserData>

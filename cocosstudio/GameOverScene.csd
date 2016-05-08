@@ -19,9 +19,9 @@
                 <PreSize X="0.4688" Y="0.0704" />
                 <FontResource Type="Normal" Path="fonts/pixel12.ttf" Plist="" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="Normal" Path="csb/image/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="csb/image/Button_Press.png" Plist="" />
-                <NormalFileData Type="Normal" Path="csb/image/Button_Normal.png" Plist="" />
+                <DisabledFileData Type="Normal" Path="image/Button_Disable.png" Plist="" />
+                <PressedFileData Type="Normal" Path="image/Button_Press.png" Plist="" />
+                <NormalFileData Type="Normal" Path="image/Button_Normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -35,9 +35,9 @@
                 <PreSize X="0.4688" Y="0.0704" />
                 <FontResource Type="Normal" Path="fonts/pixel12.ttf" Plist="" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="Normal" Path="csb/image/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="csb/image/Button_Press.png" Plist="" />
-                <NormalFileData Type="Normal" Path="csb/image/Button_Normal.png" Plist="" />
+                <DisabledFileData Type="Normal" Path="image/Button_Disable.png" Plist="" />
+                <PressedFileData Type="Normal" Path="image/Button_Press.png" Plist="" />
+                <NormalFileData Type="Normal" Path="image/Button_Normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -114,7 +114,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
                     <PreSize X="1.0000" Y="1.0000" />
-                    <FileData Type="Normal" Path="csb/image/bg.png" Plist="" />
+                    <FileData Type="Normal" Path="image/bg.png" Plist="" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

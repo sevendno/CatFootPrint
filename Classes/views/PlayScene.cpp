@@ -114,6 +114,9 @@ void PlayScene::handleCellClick(const string &value)
         if (_curLives <= 0) {
             BaseScene::gotoScene(SCENE_TYPE::GAMEOVER, _score);
             return;
+        } else {
+            auto bar = _mainUI->getChildByName("Main")->getChildByName("rightPanel")->getChildByName("bar");
+            bar->runAction(Blink::create(0.5f, 3));
         }
     } else {
         _score++;
@@ -172,7 +175,7 @@ bool CellView::init()
         return false;
     }
     setContentSize(Size(_w, _h));
-    auto node = CSLoader::createNode("csb/CellViewComp.csb");
+    auto node = CSLoader::createNode("CellViewComp.csb");
     node->setContentSize(getContentSize());
     Helper::doLayout(node);
     addChild(node);
