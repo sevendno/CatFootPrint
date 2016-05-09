@@ -29,6 +29,7 @@ namespace CatFootPrint
         void actionShowValue();
         void reset();
         void updateLivePanel();
+        void showErrorWarn();
     private:
         Layout* _container = nullptr;
         Node* _rightPanel = nullptr;

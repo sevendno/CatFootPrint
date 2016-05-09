@@ -10,7 +10,7 @@
 #include "Global.h"
 #include "cocostudio/CocoStudio.h"
 using namespace CatFootPrint;
-
+static const string ERRORPANEL = "ERROR_PANEL";
 bool PlayScene::init()
 {
     if (!Scene::init()) {
@@ -111,12 +111,10 @@ void PlayScene::handleCellClick(const string &value)
         _curLives--;
         updateLivePanel();
         GLOBAL->GetSoundCtrl()->playSound(ConfigVO::SOUND_ID::ERROR);
+        showErrorWarn();
         if (_curLives <= 0) {
             BaseScene::gotoScene(SCENE_TYPE::GAMEOVER, _score);
             return;
-        } else {
-            auto bar = _mainUI->getChildByName("Main")->getChildByName("rightPanel")->getChildByName("bar");
-            bar->runAction(Blink::create(0.5f, 3));
         }
     } else {
         _score++;
@@ -137,6 +135,19 @@ void PlayScene::updateLivePanel()
         dynamic_cast<Layout*>(child)->setBackGroundColorType(Layout::BackGroundColorType::SOLID);
         dynamic_cast<Layout*>(child)->setBackGroundColor(GLOBAL->GetConfigVO()->getDefaultColor());
     }
+}
+
+void PlayScene::showErrorWarn()
+{
+    if (this->getChildByName(ERRORPANEL)) {
+        this->removeChildByName(ERRORPANEL);
+    }
+    auto errorPanel = Layout::create();
+    errorPanel->setBackGroundColorType(Layout::BackGroundColorType::SOLID);
+    errorPanel->setBackGroundColor(Color3B::WHITE);
+    errorPanel->setContentSize(Director::getInstance()->getWinSize());
+    addChild(errorPanel,100);
+    errorPanel->runAction(FadeOut::create(0.3f));
 }
 
 void PlayScene::reset()
