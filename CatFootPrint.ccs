@@ -6,12 +6,6 @@
         <Folder Name="fonts">
           <TTF Name="pixel12.ttf" />
         </Folder>
-        <Project Name="CellViewComp.csd" Type="Layer" />
-        <Project Name="GameOverScene.csd" Type="Scene" />
-        <Project Name="HelpScene.csd" Type="Scene" />
-        <Project Name="PlayScene.csd" Type="Scene" />
-        <Project Name="StartScene.csd" Type="Scene" />
-        <Project Name="TestScene.csd" Type="Scene" />
         <Folder Name="image">
           <Image Name="bg.png" />
           <Image Name="Button_Disable.png" />
@@ -19,6 +13,12 @@
           <Image Name="Button_Press.png" />
         </Folder>
         <Project Name="AddPointsComp.csd" Type="Layer" />
+        <Project Name="CellViewComp.csd" Type="Layer" />
+        <Project Name="GameOverScene.csd" Type="Scene" />
+        <Project Name="HelpScene.csd" Type="Scene" />
+        <Project Name="PlayScene.csd" Type="Scene" />
+        <Project Name="StartScene.csd" Type="Scene" />
+        <Project Name="TestScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>
