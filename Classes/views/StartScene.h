@@ -19,6 +19,7 @@ namespace CatFootPrint
         StartScene() {};
         ~StartScene() {};
         virtual bool init() override;
+        virtual void onEnter() override;
     protected:
         virtual void initView() override;
     };

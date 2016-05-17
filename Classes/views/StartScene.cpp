@@ -29,7 +29,12 @@ void StartScene::initView()
     initButton(dynamic_cast<Button*>(_mainUI->getChildByName("Main")->getChildByName("rightPanel")->getChildByName("btn_help")), [&]() {
         BaseScene::gotoScene(SCENE_TYPE::HELP);
     });
-    
+}
+
+void StartScene::onEnter()
+{
+    Scene::onEnter();
     const auto &size = Director::getInstance()->getWinSize();
     _gridNode->runAction(RepeatForever::create(Ripple3D::create(4.0f, Size(32,24), Vec2(size.width/2,size.height/2), size.height, 10, 18)));
 }
+
