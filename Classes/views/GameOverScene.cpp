@@ -35,6 +35,7 @@ void GameOverScene::initView()
     initButton(dynamic_cast<Button*>(_mainUI->getChildByName("Main")->getChildByName("btn_retry")), [&]() {
         BaseScene::gotoScene(SCENE_TYPE::START);
     });
+    _mainUI->getChildByName("Main")->getChildByName("btn_shared")->setVisible(false);
     initButton(dynamic_cast<Button*>(_mainUI->getChildByName("Main")->getChildByName("btn_shared")), [&]() {
         
     });

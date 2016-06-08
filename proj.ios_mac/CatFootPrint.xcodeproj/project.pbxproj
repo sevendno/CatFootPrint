@@ -11,6 +11,8 @@
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		215ABBB31D0722810009801C /* Icon-87.png in Resources */ = {isa = PBXBuildFile; fileRef = 215ABBB21D0722810009801C /* Icon-87.png */; };
+		215ABBB51D0722880009801C /* Icon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = 215ABBB41D0722880009801C /* Icon-180.png */; };
 		21AC30911CC13A5400500E06 /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 21AC30861CC13A5400500E06 /* json_internalarray.inl */; };
 		21AC30921CC13A5400500E06 /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 21AC30861CC13A5400500E06 /* json_internalarray.inl */; };
 		21AC30931CC13A5400500E06 /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 21AC30871CC13A5400500E06 /* json_internalmap.inl */; };
@@ -128,6 +130,8 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* CatFootPrint-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CatFootPrint-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		215ABBB21D0722810009801C /* Icon-87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-87.png"; sourceTree = "<group>"; };
+		215ABBB41D0722880009801C /* Icon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-180.png"; sourceTree = "<group>"; };
 		21AC307F1CC13A5400500E06 /* assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assertions.h; sourceTree = "<group>"; };
 		21AC30801CC13A5400500E06 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		21AC30811CC13A5400500E06 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
@@ -452,8 +456,10 @@
 				50EF629217ECD46A001EB2F8 /* Icon-40.png */,
 				50EF629317ECD46A001EB2F8 /* Icon-58.png */,
 				50EF629417ECD46A001EB2F8 /* Icon-80.png */,
+				215ABBB21D0722810009801C /* Icon-87.png */,
 				50EF629517ECD46A001EB2F8 /* Icon-100.png */,
 				5087E77517EB970100C73F5D /* Icon-114.png */,
+				215ABBB41D0722880009801C /* Icon-180.png */,
 				5087E77617EB970100C73F5D /* Icon-120.png */,
 				5087E77717EB970100C73F5D /* Icon-144.png */,
 				5087E77817EB970100C73F5D /* Icon-152.png */,
@@ -582,6 +588,7 @@
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				21AC30991CC13A5400500E06 /* json_valueiterator.inl in Resources */,
+				215ABBB31D0722810009801C /* Icon-87.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
@@ -592,6 +599,7 @@
 				21AC30931CC13A5400500E06 /* json_internalmap.inl in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
+				215ABBB51D0722880009801C /* Icon-180.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
