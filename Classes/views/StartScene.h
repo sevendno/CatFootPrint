@@ -10,9 +10,9 @@
 #define StartScene_h
 #include "BaseScene.h"
 
-namespace CatFootPrint
-{
-    class StartScene : public BaseScene
+//namespace CatFootPrint
+//{
+class StartScene : public CatFootPrint::BaseScene
     {
     public:
         CREATE_FUNC(StartScene);
@@ -23,6 +23,6 @@ namespace CatFootPrint
     protected:
         virtual void initView() override;
     };
-}
+//}
 
 #endif /* StartScene_h */

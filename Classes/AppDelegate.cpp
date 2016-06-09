@@ -1,7 +1,8 @@
 #include "AppDelegate.h"
 #include "Global.h"
+
 USING_NS_CC;
-using namespace CatFootPrint;
+//using namespace CatFootPrint;
 
 AppDelegate::AppDelegate() {
 

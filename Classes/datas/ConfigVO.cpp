@@ -6,8 +6,18 @@
 //
 //
 
+#include <string>
+#include <vector>
+
 #include "ConfigVO.h"
+#include "cocos2d.h"
+#include "json/json_cpp.h"
+#include "flatbuffers/util.h"
+
+using namespace std;
+using namespace cocos2d;
 using namespace CatFootPrint;
+using namespace flatbuffers;
 
 ConfigVO::ConfigVO(const Json::Value &data)
 {
@@ -41,10 +51,10 @@ void ConfigVO::parseJson(const Json::Value &data)
             const int count = (int)colors.size();
             const int randIndex = rand() % count + 1;
             
-            if (colors.isMember(to_string(randIndex))) {
-                _defaultColor = Color3B(colors[to_string(randIndex)][0].asInt(),
-                                   colors[to_string(randIndex)][1].asInt(),
-                                   colors[to_string(randIndex)][2].asInt());
+            if (colors.isMember(NumToString(randIndex))) {
+                _defaultColor = Color3B(colors[NumToString(randIndex)][0].asInt(),
+                                   colors[NumToString(randIndex)][1].asInt(),
+                                   colors[NumToString(randIndex)][2].asInt());
             }
         } else {
             _defaultColor = Color3B(rand() % 256, rand() % 256, rand() % 256);
@@ -82,10 +92,10 @@ vector<ElementsVO> ConfigVO::getElements(int level)
 {
     const int elementsID = std::ceil(level*1.0f / _levelTimes);
     vector<ElementsVO> eles;
-    if (!_elements.isMember(to_string(elementsID))) {
+    if (!_elements.isMember(NumToString(elementsID))) {
         return eles;
     }
-    const Json::Value &elements = _elements[to_string(elementsID)];
+    const Json::Value &elements = _elements[NumToString(elementsID)];
     map<int,int> childTagMap;
     for (const auto& element : elements) {
         int childTag = getRandomIndex();

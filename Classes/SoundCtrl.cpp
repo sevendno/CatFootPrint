@@ -10,6 +10,9 @@
 #include "Global.h"
 #include "cocos2d.h"
 #include "audio/include/SimpleAudioEngine.h"
+#include "datas/UserModel.h"
+#include "datas/ConfigVO.h"
+
 using namespace CatFootPrint;
 using namespace cocos2d;
 using namespace CocosDenshion;
@@ -18,6 +21,7 @@ SoundCtrl::SoundCtrl(const shared_ptr<UserModel> &model)
 :_model(model)
 {
 }
+
 
 void SoundCtrl::toggle()
 {

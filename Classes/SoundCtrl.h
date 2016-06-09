@@ -12,6 +12,7 @@
 #include "datas/ConfigVO.h"
 
 using namespace std;
+
 namespace CatFootPrint
 {
     class SoundCtrl

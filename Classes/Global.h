@@ -8,9 +8,13 @@
 
 #ifndef Global_h
 #define Global_h
+
+#include <memory>
+
 #include "datas/ConfigVO.h"
 #include "datas/UserModel.h"
 #include "SoundCtrl.h"
+
 using namespace std;
 
 namespace CatFootPrint
@@ -19,6 +23,7 @@ namespace CatFootPrint
     {
     public:
         static Global* getIns();
+        
         void SetupGame();
         shared_ptr<UserModel> GetUserModel() const { return _userModel; };
         shared_ptr<ConfigVO> GetConfigVO() const { return _configVO; };
@@ -32,7 +37,8 @@ namespace CatFootPrint
         shared_ptr<ConfigVO> _configVO = nullptr;
         shared_ptr<SoundCtrl> _soundCtrl = nullptr;
     };
-#define GLOBAL Global::getIns()
 }
+
+#define GLOBAL CatFootPrint::Global::getIns()
 
 #endif /* Global_h */

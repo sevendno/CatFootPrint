@@ -8,8 +8,13 @@
 
 #ifndef BaseScene_h
 #define BaseScene_h
+
+#include <string>
+#include <vector>
+
 #include "cocos2d.h"
 #include "ui/CocosGUI.h"
+
 using namespace cocos2d;
 using namespace ui;
 using namespace std;

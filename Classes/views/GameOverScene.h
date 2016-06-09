@@ -8,7 +8,13 @@
 
 #ifndef GameOverScene_h
 #define GameOverScene_h
+
+#include <string>
+
 #include "BaseScene.h"
+
+using namespace std;
+using namespace cocos2d;
 
 namespace CatFootPrint
 {

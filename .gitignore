@@ -25,3 +25,23 @@ project.xcworkspace/
 xcuserdata/  
 
 UserInterface.xcuserstate
+bin/
+cocos2d/cocos/platform/android/java/bin/
+cocos2d/cocos/platform/android/java/gen/
+cocos2d/cocos/platform/android/java/local.properties
+cocos2d/cocos/platform/android/libcocos2dx/libcocos2dx.iml
+proj.android-studio/.idea/
+proj.android-studio/app/CatFootPrint.iml
+proj.android-studio/app/build.xml
+proj.android-studio/app/local.properties
+proj.android-studio/app/obj/
+proj.android-studio/app/proguard-project.txt
+proj.android-studio/proj.android-studio.iml
+proj.android/assets/
+proj.android/bin/
+proj.android/gen/
+proj.android/local.properties
+proj.android/obj/
+proj.ios_mac/shared/
+.cocos-project.json
+proj.android/libs/

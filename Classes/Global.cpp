@@ -6,8 +6,12 @@
 //
 //
 
+#include <string>
+
 #include "Global.h"
 #include "views/StartScene.h"
+#include "json/json_cpp.h"
+
 using namespace CatFootPrint;
 
 Global* Global::_instance = nullptr;

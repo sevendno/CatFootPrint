@@ -8,11 +8,16 @@
 
 #ifndef ConfigVO_h
 #define ConfigVO_h
+
+#include <string>
+#include <vector>
+
 #include "cocos2d.h"
-#include "json_cpp.h"
+#include "json/json_cpp.h"
 
 using namespace std;
 using namespace cocos2d;
+
 namespace CatFootPrint
 {
     struct ElementsVO

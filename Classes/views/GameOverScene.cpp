@@ -6,9 +6,17 @@
 //
 //
 
+#include <string>
+#include <vector>
+
 #include "GameOverScene.h"
 #include "Global.h"
+#include "flatbuffers/util.h"
+
+using namespace std;
+using namespace cocos2d;
 using namespace CatFootPrint;
+using namespace flatbuffers;
 
 GameOverScene* GameOverScene::create(int score)
 {
@@ -41,7 +49,7 @@ void GameOverScene::initView()
     });
     auto panel = _mainUI->getChildByName("Main")->getChildByName("panelscore")->getChildByName("bg");
     setTextColor(panel->getChildByName("tScoreTitle"));
-    setTextColor(panel->getChildByName("tScore"), to_string(_score));
+    setTextColor(panel->getChildByName("tScore"), NumToString(_score));
     setTextColor(panel->getChildByName("tBestTitle"));
     
     auto tPastBest = _mainUI->getChildByName("Main")->getChildByName("tPastBest");
@@ -53,7 +61,7 @@ void GameOverScene::initView()
     } else {
         GLOBAL->GetSoundCtrl()->playSound(ConfigVO::SOUND_ID::OVER);
     }
-    setTextColor(panel->getChildByName("tBest"), to_string(UserDefault::getInstance()->getIntegerForKey(key.c_str())));
+    setTextColor(panel->getChildByName("tBest"), NumToString(UserDefault::getInstance()->getIntegerForKey(key.c_str())));
 }
 
 void GameOverScene::setTextColor(cocos2d::Node *text, const string &value)

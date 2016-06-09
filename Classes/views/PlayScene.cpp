@@ -6,10 +6,13 @@
 //
 //
 
+#include "cocostudio/CocoStudio.h"
+#include "datas/ConfigVO.h"
 #include "PlayScene.h"
 #include "Global.h"
-#include "cocostudio/CocoStudio.h"
+
 using namespace CatFootPrint;
+
 static const string ERRORPANEL = "ERROR_PANEL";
 bool PlayScene::init()
 {

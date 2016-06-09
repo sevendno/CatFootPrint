@@ -6,6 +6,8 @@
 //
 //
 
+#include <string>
+#include "cocos2d.h"
 #include "UserModel.h"
 
 using namespace CatFootPrint;

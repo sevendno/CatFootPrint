@@ -6,14 +6,20 @@
 //
 //
 
+#include <string>
+
 #include "Global.h"
+#include "cocos2d.h"
 #include "BaseScene.h"
 #include "StartScene.h"
 #include "PlayScene.h"
 #include "HelpScene.h"
 #include "GameOverScene.h"
 #include "cocostudio/CocoStudio.h"
-#include "Config.h"
+#include "json/Config.h"
+
+using namespace std;
+using namespace cocos2d;
 using namespace CatFootPrint;
 
 void BaseScene::initButton(cocos2d::ui::Widget *widget, const function<void()> &cbClick)
