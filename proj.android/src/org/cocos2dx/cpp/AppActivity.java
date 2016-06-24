@@ -27,6 +27,53 @@ THE SOFTWARE.
 package org.cocos2dx.cpp;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
+import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
+import android.app.AlertDialog;
+import android.view.KeyEvent;
+import android.content.DialogInterface;
+import android.graphics.PixelFormat;
+
 
 public class AppActivity extends Cocos2dxActivity {
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        // TODO Auto-generated method stub
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_BACK:
+                AlertDialog.Builder build=new AlertDialog.Builder(this);
+                build.setTitle("注意")
+                .setMessage("确定要退出吗？")
+                .setPositiveButton("确定", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // TODO Auto-generated method stub
+                        finish();
+                        System.exit(1);
+                    }
+                })
+                .setNegativeButton("取消", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // TODO Auto-generated method stub
+                    }
+                })
+                .setOnCancelListener(new DialogInterface.OnCancelListener()
+                {
+                    @Override
+                    public void onCancel(DialogInterface dialog) {
+                        // TODO Auto-generated method stub
+                        dialog.cancel();
+                        return;
+                    }
+                })
+                .setCancelable(false)
+                .show();
+            break;
+  
+        default:   
+            break;   
+        }   
+        return true; 
+    }
 }

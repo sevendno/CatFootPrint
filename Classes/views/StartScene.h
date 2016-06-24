@@ -22,6 +22,8 @@ class StartScene : public CatFootPrint::BaseScene
         virtual void onEnter() override;
     protected:
         virtual void initView() override;
+    private:
+        void onKeyReleased(EventKeyboard::KeyCode keycode, cocos2d::Event *event);
     };
 //}
 

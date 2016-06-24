@@ -30,6 +30,9 @@ cocos2d/cocos/platform/android/java/bin/
 cocos2d/cocos/platform/android/java/gen/
 cocos2d/cocos/platform/android/java/local.properties
 cocos2d/cocos/platform/android/libcocos2dx/libcocos2dx.iml
+cocos2d/cocos/platform/android/libcocos2dx/build/
+proj.android-studio/app/assets/
+proj.android-studio/app/libs/
 proj.android-studio/.idea/
 proj.android-studio/app/CatFootPrint.iml
 proj.android-studio/app/build.xml

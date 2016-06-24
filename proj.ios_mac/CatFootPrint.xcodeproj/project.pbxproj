@@ -167,7 +167,7 @@
 		21F9A3B51CD265AD0010DDDE /* Global.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Global.cpp; sourceTree = "<group>"; };
 		21F9A3B61CD265AD0010DDDE /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		21F9A3B91CD4AACF0010DDDE /* SoundCtrl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundCtrl.cpp; sourceTree = "<group>"; };
-		21F9A3BA1CD4AACF0010DDDE /* SoundCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundCtrl.h; path = ../SoundCtrl.h; sourceTree = "<group>"; };
+		21F9A3BA1CD4AACF0010DDDE /* SoundCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundCtrl.h; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B8419C43A87006E1F66 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
@@ -332,7 +332,6 @@
 		21F9A3971CD262240010DDDE /* views */ = {
 			isa = PBXGroup;
 			children = (
-				21F9A3BA1CD4AACF0010DDDE /* SoundCtrl.h */,
 				21F9A3981CD262240010DDDE /* BaseScene.cpp */,
 				21F9A3991CD262240010DDDE /* BaseScene.h */,
 				21F9A39A1CD262240010DDDE /* GameOverScene.cpp */,
@@ -416,6 +415,7 @@
 				21F9A3B51CD265AD0010DDDE /* Global.cpp */,
 				21F9A3B61CD265AD0010DDDE /* Global.h */,
 				21F9A3B91CD4AACF0010DDDE /* SoundCtrl.cpp */,
+				21F9A3BA1CD4AACF0010DDDE /* SoundCtrl.h */,
 				21F9A3AC1CD2652C0010DDDE /* datas */,
 				21F9A3971CD262240010DDDE /* views */,
 			);

@@ -5,7 +5,6 @@
 //  Created by sevendno on 16/4/14.
 //
 //
-
 #include "StartScene.h"
 #include "PlayScene.h"
 #include "HelpScene.h"
@@ -38,5 +37,24 @@ void StartScene::onEnter()
     initButton(dynamic_cast<Button*>(_mainUI->getChildByName("Main")->getChildByName("rightPanel")->getChildByName("btn_help")), [&]() {
         BaseScene::gotoScene(SCENE_TYPE::HELP);
     });
+    
+//    auto listenerkeyPad = EventListenerKeyboard::create();
+//    listenerkeyPad->onKeyReleased = CC_CALLBACK_2(StartScene::onKeyReleased, this);
+//    _eventDispatcher->addEventListenerWithSceneGraphPriority(listenerkeyPad, this);
+    
+    
+
+}
+
+//捕捉监听
+void StartScene::onKeyReleased(EventKeyboard::KeyCode keycode, cocos2d::Event *event)
+{
+    
+//    Director::getInstance()->pause();
+//    Director::getInstance()->end();
+//    if (keycode == EventKeyboard::KeyCode::KEY_BACKSPACE)  //返回
+//    {
+//        Director::getInstance()->end();
+//    }
 }
 
