@@ -1,9 +1,9 @@
 {
     "version":"3.1.1",
-    "packageUrl":"https://assets.seawars.cn/3.1.1/Res/",
-    "remoteVersionUrl":"https://assets.seawars.cn/3.1.1/version.manifest",
-    "remoteManifestUrl":"https://assets.seawars.cn/3.1.1/project.manifest",
+    "packageUrl":"https://github.com/sevendno/CatFootPrint/tree/master/3.1.1/Res/",
+    "remoteVersionUrl":"https://github.com/sevendno/CatFootPrint/tree/master/3.1.1/version.manifest",
+    "remoteManifestUrl":"https://github.com/sevendno/CatFootPrint/tree/master/3.1.1/project.manifest",
     "assets":{
-        "res/HelloWorld.png":{"md5":"b322cf453ebeefea5d89afbed7d6e056"}
+        "res/HelloWorld.png":{"md5":"b322cf453ebeefea5d89afbed7d6e0523236"}
     }
 }
