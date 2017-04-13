@@ -2,6 +2,6 @@
     "packageUrl": "https://raw.githubusercontent.com/sevendno/CatFootPrint/master/assets_manager/AMTestScene1/",
     "remoteManifestUrl": "https://raw.githubusercontent.com/sevendno/CatFootPrint/master/assets_manager/AMTestScene1/project_dev.manifest",
     "remoteVersionUrl": "https://raw.githubusercontent.com/sevendno/CatFootPrint/master/assets_manager/AMTestScene1/version_dev.manifest",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "engineVersion": "3.0 dev"
 }
