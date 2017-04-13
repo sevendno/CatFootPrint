@@ -1,0 +1,16 @@
+{
+    "packageUrl" : "https://github.com/sevendno/CatFootPrint/tree/master/assets_manager/AMTestScene1/",
+    "remoteManifestUrl" : "https://github.com/sevendno/CatFootPrint/tree/master/assets_manager/AMTestScene1/project_dev.manifest",
+    "remoteVersionUrl" : "https://github.com/sevendno/CatFootPrint/tree/master/assets_manager/AMTestScene1/version_dev.manifest",
+    "version" : "1.2.0",
+    "engineVersion" : "3.x dev",
+
+    "assets" : {
+        "res/HelloWorld.png" : {
+            "md5" : "g22cf453ebeefea5d8sdf4349afbed7d6e056"
+        }
+    },
+
+    "searchPaths" : [
+    ]
+}
